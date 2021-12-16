@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="563px" height="294px" viewBox="0 0 563 294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>code1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal">
+        <g id="切图" transform="translate(-241.000000, -2003.000000)">
+            <text id="code1">
+                <tspan x="241" y="2015" fill="#333333">{</tspan>
+                <tspan x="241" y="2035" fill="#333333">	</tspan>
+                <tspan x="269" y="2035" fill="#007C00">"dataSource"</tspan>
+                <tspan x="355.212" y="2035" fill="#333333">: </tspan>
+                <tspan x="363.57" y="2035" fill="#C03435">"tpc-h"</tspan>
+                <tspan x="412.612" y="2035" fill="#333333">,</tspan>
+                <tspan x="241" y="2055" fill="#333333">	</tspan>
+                <tspan x="269" y="2055" fill="#007C00">"predicates"</tspan>
+                <tspan x="349.122" y="2055" fill="#333333">: {</tspan>
+                <tspan x="241" y="2075" fill="#333333">		</tspan>
+                <tspan x="297" y="2075" fill="#007C00">"type"</tspan>
+                <tspan x="336.844" y="2075" fill="#333333">: </tspan>
+                <tspan x="345.202" y="2075" fill="#C03435">"and"</tspan>
+                <tspan x="381.014" y="2075" fill="#333333">,</tspan>
+                <tspan x="241" y="2095" fill="#333333">		</tspan>
+                <tspan x="297" y="2095" fill="#007C00">"children"</tspan>
+                <tspan x="360.182" y="2095" fill="#333333">: [</tspan>
+                <tspan x="241" y="2115" fill="#333333">                        { </tspan>
+                <tspan x="362.212" y="2115" fill="#007C00">"type"</tspan>
+                <tspan x="402.056" y="2115" fill="#333333">: </tspan>
+                <tspan x="410.414" y="2115" fill="#C03435">"single"</tspan>
+                <tspan x="460.184" y="2115" fill="#333333">, </tspan>
+                <tspan x="468.542" y="2115" fill="#007C00">"dimension"</tspan>
+                <tspan x="546.536" y="2115" fill="#333333">: </tspan>
+                <tspan x="554.894" y="2115" fill="#C03435">"O_ORDERPRIORITY"</tspan>
+                <tspan x="696.28" y="2115" fill="#333333">, </tspan>
+                <tspan x="704.638" y="2115" fill="#007C00">"operator"</tspan>
+                <tspan x="771.992" y="2115" fill="#333333">: </tspan>
+                <tspan x="780.35" y="2115" fill="#C03435">"="</tspan>
+                <tspan x="800.776" y="2115" fill="#333333">,</tspan>
+                <tspan x="241" y="2135" fill="#333333">                           </tspan>
+                <tspan x="366.874" y="2135" fill="#007C00">"values"</tspan>
+                <tspan x="419.374" y="2135" fill="#333333">: [</tspan>
+                <tspan x="432.394" y="2135" fill="#C03435">"2-HIGH"</tspan>
+                <tspan x="495.17" y="2135" fill="#333333">]},</tspan>
+                <tspan x="241" y="2155" fill="#333333">                        { </tspan>
+                <tspan x="362.212" y="2155" fill="#007C00">"type"</tspan>
+                <tspan x="402.056" y="2155" fill="#333333">: </tspan>
+                <tspan x="410.414" y="2155" fill="#007C00">"single"</tspan>
+                <tspan x="460.184" y="2155" fill="#333333">, </tspan>
+                <tspan x="468.542" y="2155" fill="#007C00">"dimension"</tspan>
+                <tspan x="546.536" y="2155" fill="#333333">: </tspan>
+                <tspan x="554.894" y="2155" fill="#C03435">"R_NAME"</tspan>
+                <tspan x="623.844" y="2155" fill="#333333">, </tspan>
+                <tspan x="632.202" y="2155" fill="#007C00">"operator"</tspan>
+                <tspan x="699.556" y="2155" fill="#333333">: </tspan>
+                <tspan x="707.914" y="2155" fill="#C03435">"="</tspan>
+                <tspan x="728.34" y="2155" fill="#333333">,</tspan>
+                <tspan x="241" y="2175" fill="#333333">                           </tspan>
+                <tspan x="366.874" y="2175" fill="#007C00">"values"</tspan>
+                <tspan x="419.374" y="2175" fill="#333333">: [</tspan>
+                <tspan x="432.394" y="2175" fill="#C03435">"EUROPE"</tspan>
+                <tspan x="501.372" y="2175" fill="#333333">]},</tspan>
+                <tspan x="241" y="2195" fill="#333333">                        {</tspan>
+                <tspan x="357.55" y="2195" fill="#007C00"> "type"</tspan>
+                <tspan x="402.056" y="2195" fill="#333333">: "single", </tspan>
+                <tspan x="468.542" y="2195" fill="#007C00">"dimension"</tspan>
+                <tspan x="546.536" y="2195" fill="#333333">: </tspan>
+                <tspan x="554.894" y="2195" fill="#C03435">"O_ORDERDATE"</tspan>
+                <tspan x="669.722" y="2195" fill="#333333">, </tspan>
+                <tspan x="678.08" y="2195" fill="#007C00">"operator"</tspan>
+                <tspan x="745.434" y="2195" fill="#333333">: </tspan>
+                <tspan x="753.792" y="2195" fill="#C03435">"in"</tspan>
+                <tspan x="777.158" y="2195" fill="#333333">,</tspan>
+                <tspan x="241" y="2215" fill="#333333">                           </tspan>
+                <tspan x="366.874" y="2215" fill="#007C00">"values"</tspan>
+                <tspan x="419.374" y="2215" fill="#333333">: [</tspan>
+                <tspan x="432.394" y="2215" fill="#C03435">"1993-01-01|1993-12-31"</tspan>
+                <tspan x="598.644" y="2215" fill="#333333">]} ]</tspan>
+                <tspan x="241" y="2235" fill="#333333">        },</tspan>
+                <tspan x="241" y="2255" fill="#333333">	</tspan>
+                <tspan x="269" y="2255" fill="#007C00">"groupBy"</tspan>
+                <tspan x="335.01" y="2255" fill="#333333">:[{ </tspan>
+                <tspan x="352.692" y="2255" fill="#007C00">"dimension"</tspan>
+                <tspan x="430.686" y="2255" fill="#333333">: </tspan>
+                <tspan x="439.044" y="2255" fill="#C03435">"N_NAME"</tspan>
+                <tspan x="508.596" y="2255" fill="#333333"> }],</tspan>
+                <tspan x="241" y="2275" fill="#333333">	</tspan>
+                <tspan x="269" y="2275" fill="#007C00">"aggregations"</tspan>
+                <tspan x="365.964" y="2275" fill="#333333">:[{</tspan>
+                <tspan x="378.984" y="2275" fill="#007C00"> "dimension"</tspan>
+                <tspan x="461.64" y="2275" fill="#333333">: </tspan>
+                <tspan x="469.998" y="2275" fill="#C03435">"O_TOTALPRICE"</tspan>
+                <tspan x="586.072" y="2275" fill="#333333">, </tspan>
+                <tspan x="594.43" y="2275" fill="#007C00">"operator"</tspan>
+                <tspan x="661.784" y="2275" fill="#333333">: </tspan>
+                <tspan x="670.142" y="2275" fill="#C03435">"COUNT"</tspan>
+                <tspan x="731.756" y="2275" fill="#333333"> }]</tspan>
+                <tspan x="241" y="2295" fill="#333333">}</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

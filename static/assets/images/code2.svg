@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350px" height="434px" viewBox="0 0 350 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>code2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal">
+        <g id="切图" transform="translate(-1079.000000, -1933.000000)">
+            <text id="code2">
+                <tspan x="1079" y="1945" fill="#333333">{</tspan>
+                <tspan x="1079" y="1965" fill="#333333">	</tspan>
+                <tspan x="1107" y="1965" fill="#007C00">"dataSource"</tspan>
+                <tspan x="1193.212" y="1965" fill="#333333">: </tspan>
+                <tspan x="1201.57" y="1965" fill="#C03435">"MED"</tspan>
+                <tspan x="1244.676" y="1965" fill="#333333">,</tspan>
+                <tspan x="1079" y="1985" fill="#333333">	</tspan>
+                <tspan x="1107" y="1985" fill="#007C00">"referName"</tspan>
+                <tspan x="1187.57" y="1985" fill="#333333">: </tspan>
+                <tspan x="1195.928" y="1985" fill="#C03435">"Q1_Result"</tspan>
+                <tspan x="1271.64" y="1985" fill="#333333">,</tspan>
+                <tspan x="1079" y="2005" fill="#333333">	</tspan>
+                <tspan x="1107" y="2005" fill="#007C00">"birthSelection"</tspan>
+                <tspan x="1208.528" y="2005" fill="#333333">:[{</tspan>
+                <tspan x="1079" y="2025" fill="#333333">		</tspan>
+                <tspan x="1135" y="2025" fill="#007C00">"dimension"</tspan>
+                <tspan x="1212.994" y="2025" fill="#333333">:</tspan>
+                <tspan x="1216.69" y="2025" fill="#C03435">"INSTITUTION"</tspan>
+                <tspan x="1314.312" y="2025" fill="#333333">,</tspan>
+                <tspan x="1079" y="2045" fill="#333333">		</tspan>
+                <tspan x="1135" y="2045" fill="#007C00">"values"</tspan>
+                <tspan x="1187.5" y="2045" fill="#333333">: [</tspan>
+                <tspan x="1200.52" y="2045" fill="#C03435">"NUS"</tspan>
+                <tspan x="1241.386" y="2045" fill="#333333">, </tspan>
+                <tspan x="1249.744" y="2045" fill="#C03435">"NHGP"</tspan>
+                <tspan x="1301.306" y="2045" fill="#333333">],</tspan>
+                <tspan x="1079" y="2065" fill="#333333">		</tspan>
+                <tspan x="1135" y="2065" fill="#007C00">"birthActions"</tspan>
+                <tspan x="1225.118" y="2065" fill="#333333">: [</tspan>
+                <tspan x="1079" y="2085" fill="#333333">			{ </tspan>
+                <tspan x="1172.324" y="2085" fill="#007C00">"value"</tspan>
+                <tspan x="1217.754" y="2085" fill="#333333">:</tspan>
+                <tspan x="1221.45" y="2085" fill="#C03435"> "observation start"</tspan>
+                <tspan x="1348.192" y="2085" fill="#333333">, </tspan>
+                <tspan x="1356.55" y="2085" fill="#007C00">"order"</tspan>
+                <tspan x="1402.904" y="2085" fill="#333333">: 1 },</tspan>
+                <tspan x="1079" y="2105" fill="#333333">			{ </tspan>
+                <tspan x="1172.324" y="2105" fill="#007C00">"value"</tspan>
+                <tspan x="1217.754" y="2105" fill="#333333">: </tspan>
+                <tspan x="1226.112" y="2105" fill="#C03435">"operating"</tspan>
+                <tspan x="1299.836" y="2105" fill="#333333">,</tspan>
+                <tspan x="1303.532" y="2105" fill="#007C00"> "order"</tspan>
+                <tspan x="1354.548" y="2105" fill="#333333">: 2 }</tspan>
+                <tspan x="1079" y="2125" fill="#333333">                ]</tspan>
+                <tspan x="1079" y="2145" fill="#333333">	}],</tspan>
+                <tspan x="1079" y="2165" fill="#333333">	</tspan>
+                <tspan x="1107" y="2165" fill="#007C00">"ageSelection"</tspan>
+                <tspan x="1202.746" y="2165" fill="#333333">: [{ </tspan>
+                <tspan x="1079" y="2185" fill="#333333">               </tspan>
+                <tspan x="1148.93" y="2185" fill="#007C00"> "selectType"</tspan>
+                <tspan x="1235.66" y="2185" fill="#333333">: </tspan>
+                <tspan x="1244.018" y="2185" fill="#C03435">"set"</tspan>
+                <tspan x="1275.784" y="2185" fill="#333333">,</tspan>
+                <tspan x="1079" y="2205" fill="#333333">               </tspan>
+                <tspan x="1148.93" y="2205" fill="#007C00"> "dimension"</tspan>
+                <tspan x="1231.586" y="2205" fill="#333333">: </tspan>
+                <tspan x="1239.944" y="2205" fill="#C03435">"TR_STATUS"</tspan>
+                <tspan x="1331.252" y="2205" fill="#333333">,</tspan>
+                <tspan x="1079" y="2225" fill="#333333">               </tspan>
+                <tspan x="1148.93" y="2225" fill="#007C00"> "values"</tspan>
+                <tspan x="1206.092" y="2225" fill="#333333">: [</tspan>
+                <tspan x="1219.112" y="2225" fill="#C03435">"effective"</tspan>
+                <tspan x="1286.942" y="2225" fill="#333333">]</tspan>
+                <tspan x="1079" y="2245" fill="#333333">        }],</tspan>
+                <tspan x="1079" y="2265" fill="#333333">	</tspan>
+                <tspan x="1107" y="2265" fill="#007C00">"cohortBy"</tspan>
+                <tspan x="1177.308" y="2265" fill="#333333">: {</tspan>
+                <tspan x="1079" y="2285" fill="#333333">		</tspan>
+                <tspan x="1135" y="2285" fill="#007C00">"dimension"</tspan>
+                <tspan x="1212.994" y="2285" fill="#333333">: </tspan>
+                <tspan x="1221.352" y="2285" fill="#C03435">"INSTITUTION"</tspan>
+                <tspan x="1318.974" y="2285" fill="#333333">,</tspan>
+                <tspan x="1079" y="2305" fill="#333333">               </tspan>
+                <tspan x="1148.93" y="2305" fill="#007C00"> "ageInterval"</tspan>
+                <tspan x="1236.276" y="2305" fill="#333333">: </tspan>
+                <tspan x="1244.634" y="2305" fill="#C03435">"DAY"</tspan>
+                <tspan x="1284.94" y="2305" fill="#333333">,</tspan>
+                <tspan x="1079" y="2325" fill="#333333">		</tspan>
+                <tspan x="1135" y="2325" fill="#007C00">"cohortMetric"</tspan>
+                <tspan x="1230.326" y="2325" fill="#333333">: </tspan>
+                <tspan x="1238.684" y="2325" fill="#C03435">"Retention"</tspan>
+                <tspan x="1313.024" y="2325" fill="#333333"></tspan>
+                <tspan x="1079" y="2345" fill="#333333">	}</tspan>
+                <tspan x="1079" y="2365" fill="#333333">}</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
