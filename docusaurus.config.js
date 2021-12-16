@@ -54,7 +54,7 @@ const config = {
       announcementBar: {
         id: 'github-star',
         content:
-            'If you like COOL, give us a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/cool-squad/">Github</a>!🌟',
+            'If you like COOL, give us a star on <a target="_blank" rel="noopener noreferrer" href='+customFields.githubUrl+customFields.EngineName+'>Github</a>!🌟',
         backgroundColor: '#20232a',
         textColor: '#ffffff',
         isCloseable: false,
@@ -104,12 +104,12 @@ const config = {
             position: 'right'
           },
           {
-            href: customFields.githubAppUrl,
+            href: customFields.githubUrl+customFields.EngineName,
             label: 'GitHub',
             position: 'right',
           },
           {
-            href: customFields.githubAppUrl,
+            href: customFields.githubUrl+customFields.EngineName,
             'aria-label': 'GitHub repository',
             position: 'right',
             className: 'navbar-github-link',
@@ -150,7 +150,7 @@ const config = {
             items: [
               {
                 label: 'Getting Start',
-                href: customFields.githubUrl,
+                href: customFields.githubUrl+customFields.EngineName,
               },
               {
                 label: 'User Guide',

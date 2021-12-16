@@ -3,9 +3,9 @@ module.exports = {
   copyright: `Copyright © ${new Date().getFullYear()} COOL`,
   description:
     'COOL is a cohort OLAP system specialized for cohort analysis with extremely low latency.',
-  githubUrl: `https://github.com/cool-squad`,
-  githubAppUrl: `https://github.com/cool-squad/cool`,
-  githubWebUrl: 'https://github.com/cool-squad/cool-covid-website',
+  githubUrl: `https://github.com/COOL-cohort/`,
+  EngineName: `COOL`,
+  WebAppName: 'COOL-webapp',
   title: 'COOL: CohOrt OnLine Processing system',
   versions: ['1.0.0'],
   livedemoUrl:
