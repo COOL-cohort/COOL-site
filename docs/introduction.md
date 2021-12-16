@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-id: intro
+id: introduction
 title: welcome
 tags:
 - welcome
