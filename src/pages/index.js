@@ -36,7 +36,7 @@ function IntroHeader() {
                 </a>
                 <div className="social-button github-button">
                     <GitHubButton
-                        href={customFields.githubAppUrl}
+                        href={customFields.githubUrl+customFields.EngineName}
                         data-icon="octicon-star"
                         data-size="large"
                         aria-label="Star COOL on GitHub">
@@ -57,7 +57,7 @@ function IntroHeader() {
                         </a>
                         <a
                             className="button secondary"
-                            href={customFields.githubWebUrl}
+                            href={customFields.githubUrl+customFields.EngineName}
                             target="_self">
                             Learn more
                         </a>
@@ -389,11 +389,11 @@ function Demostration() {
 
 const CoolCode =
     '# Install COOL\n' +
-    'git clone https://github.com/cool-squad/cool.git';
+    'git clone ' + customFields.githubUrl + customFields.EngineName;
 const WebCode =
     '# Install COOL with our website application\n' +
-    'git clone https://github.com/cool-squad/cool-covid-website.git\n' +
-    'cd cool-covid-website\n' +
+    'git clone ' + customFields.githubUrl + customFields.WebAppName + '\n' +
+    'cd COOL-webapp\n' +
     'sh docker.sh start';
 
 function TryOurCode() {
