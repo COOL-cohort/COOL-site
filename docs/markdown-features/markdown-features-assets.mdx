@@ -131,7 +131,7 @@ import ThemedImage from '@theme/ThemedImage';
 
 ## Static assets {#static-assets}
 
-If a Markdown link or image has an absolute path, the path will be seen as a file path and will be resolved from the static directories. For example, if you have configured [static directories](../../static-assets.md) to be `['public', 'static']`, then for the following image:
+If a Markdown link or image has an absolute path, the path will be seen as a file path and will be resolved from the static directories. For example, if you have configured [static directories] to be `['public', 'static']`, then for the following image:
 
 
 Docusaurus will try to look for it in both `static/img/docusaurus.png` and `public/img/docusaurus.png`. The link will then be converted to a `require` call instead of staying as a URL. This is desirable in two regards:
