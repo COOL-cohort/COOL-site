@@ -4,7 +4,13 @@ After building the COOL system, under the root directory, execute the following 
 ```bash
 java -cp ./target/cool-0.1-SNAPSHOT.jar com.nus.cool.loader.LocalLoader sogamo sogamo/table.yaml sogamo/dim_test.csv sogamo/test.csv ./test 65536
 ```
-The command indicates that we use the LocalLoader to load the sogamo dataset. The table.yaml describing the table schema can be found at `sogamo/table.yaml`. The dimension file can be found at `sogamo/dim_test.csv`. The output directory to store the converted dataset is `test` and chunk size for COOL [cublet](../data-formats.md) is 64MB. 
+The command indicates that we use the LocalLoader to load the sogamo dataset. 
+* `sogamo`: name of the dataset
+* `sogamo/table.yaml`: the table.yaml describing the table schema
+* `sogamo/dim_test.csv`: the dimension file 
+* `test`: the output directory to store the converted dataset 
+*  65536 (i.e. 64KB) chunk size for COOL [cublet](../data-formats.md)
+
 A directory named `test` appears containing the converted dataset. It contains one table named sogamo and the table has one cublet.
 ```
 test/
@@ -17,6 +23,9 @@ Running the sample query embedded in [CohortLoader](https://github.com/COOL-coho
 ```
 $ java -cp ./target/cool-0.1-SNAPSHOT.jar com.nus.cool.loader.CohortLoader test sogamo
 ```
+* `test`: the directory where datasets are stored
+* `sogamo`: input dataset name
+
 A sample query result is shown below.
 ```json
 {
