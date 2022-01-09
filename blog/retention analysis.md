@@ -1,6 +1,8 @@
 # Cohort Analysis on Retention Analysis
 Given a set of user data for a new product, how to effectively analyze user behavior and the real user value? Conventional statistical approaches can mislead our decisions by demonstrating well-behaved average value and drawing some beautiful charts. Therefore, we are in urgent need of mastering an effective method to capture the real user value. Data never lies. However, sometimes the people who analyze the data do not do the appropriate analysis, which leads to the wrong interpretation of the user data! As an efficient data analysis method, cohort analysis was first used in medical research to see how the behavior of diverse groups of people varies over time.
+
 ![Image text](https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png)
+
 ## What is cohort analysis in finance application?
 
 A cohort is a subdivision of a user group, which refers to the group of users with common behavior characteristics in a specified time. Acquisition cohorts and behavioral cohorts are the two common segments, in which users are grouped by stage in the user journey and their actions in a product, respectively. Common behavioral characteristics refer to similar behaviors within a certain period, which can be categorized by different behaviors and contrasting times. For example, the users whose first purchase is in January 2021 may be grouped as a cohort. Or the frequency of use of product starts to drop in the last month of January 2021. Note that cohort analysis focuses on analyzing the differences between separate groups at the same stage of the customer life cycle.
