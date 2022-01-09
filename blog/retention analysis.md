@@ -1,9 +1,7 @@
 # Cohort Analysis on Retention Analysis
 Given a set of user data for a new product, how to effectively analyze user behavior and the real user value? Conventional statistical approaches can mislead our decisions by demonstrating well-behaved average value and drawing some beautiful charts. Therefore, we are in urgent need of mastering an effective method to capture the real user value. Data never lies. However, sometimes the people who analyze the data do not do the appropriate analysis, which leads to the wrong interpretation of the user data! As an efficient data analysis method, cohort analysis was first used in medical research to see how the behavior of diverse groups of people varies over time.
 
-![Image text](https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png)
-
-<img src="https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png" width="640" />
+<img src="https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png" width="700" />
 
 ## What is cohort analysis in finance application?
 
