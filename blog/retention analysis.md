@@ -3,7 +3,7 @@ Given a set of user data for a new product, how to effectively analyze user beha
 
 ![Image text](https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png)
 
-<img src="https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png" width="1200" />
+<img src="https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png" width="800" />
 
 ## What is cohort analysis in finance application?
 
