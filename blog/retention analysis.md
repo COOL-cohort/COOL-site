@@ -31,4 +31,7 @@ In the first few months, the retention rate of A is higher than that of B, and t
 But if we think a little bit more carefully. It is found that the promotion of APP A is mostly online and a small part offline, while APP B is just the opposite. Consequently, if we want to analyze the data more precisely, we need to break it down a bit more.
 
 ### Behavioral cohorts:
-Another popular method to group the users is based on the behaviors. For example, after we obtain user data after they have registered the APP A, we can further divide the cohort based on the usage time or their preferred function when using this APP. Then, the columns of the table contain the cohort which is determined by the behavior, and the row data represents the observed activity in the APP. Compared to acquisition cohort, behavioral cohort depends more on the characteristics of the product and should be able to capture more valuable user information if it is utilized effectively. As Kelvin said, “If you cannot measure it, you cannot improve it.”
+Another popular method to group the users is based on the behaviors. For example, after we obtain user data after they have registered the APP A, we can further divide the cohort based on the usage time or their preferred function when using this APP. Then, the columns of the table contain the cohort which is determined by the behavior, and the row data represents the observed activity in the APP. Compared to acquisition cohort, behavioral cohort depends more on the characteristics of the product and should be able to capture more valuable user information if it is utilized effectively. 
+
+
+As Kelvin said, “If you cannot measure it, you cannot improve it.”
