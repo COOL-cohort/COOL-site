@@ -38,7 +38,7 @@ But if we think a little bit more carefully. It is found that the promotion of A
 Another popular method to group the users is based on the behaviors. For example, if we obtain user data after they have registered the APP A, we can further divide the cohort based on the usage time or their preferred function when using this APP. Then, the columns of the table contain the cohort which is determined by the behavior, and the row data represents the observed activity in the APP. Compared to acquisition cohort, behavioral cohort depends more on the characteristics of the product and should be able to capture more valuable user information if it is utilized effectively. 
 
 Usage time for different cohorts over APP A and APP B .
-![ cohort flow](./img/behavior.PNG)
+![ cohort flow](./img/Behavior.PNG)
 
 The above table shows an exampple of behavior cohort based on users' usage time in APP A and APP B. If we want to charge the users and achieve higher revenue by adding some paid features in the APPs, we should focus more on those uses who have spent more time ove the APP. For APP A and APP B, since more users prefer spedning more time over APP A, more efforts should be put over APP A.
 
