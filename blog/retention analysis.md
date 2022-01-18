@@ -1,9 +1,14 @@
-# Cohort Analysis on Retention Analysis
-Given a set of user data for a new product, how to effectively analyze user behavior and the real user value? Conventional statistical approaches can mislead our decisions by demonstrating well-behaved average value and drawing some beautiful charts. Therefore, we are in urgent need of mastering an effective method to capture the real user value. Data never lies. However, sometimes the people who analyze the data do not do the appropriate analysis, which leads to the wrong interpretation of the user data! As an efficient data analysis method, cohort analysis was first used in medical research to see how the behavior of diverse groups of people varies over time.
+---
+title: Cohort Analysis on Finance Application
+authors: [xiao fei]
+tags: [cohort analysis, finance]
 
-<p align="center">
-  <img src="https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/cohort%20flow.png" width="700" />
-</p>
+---
+
+# Cohort Analysis on Finance Application
+Given a set of user data for a new product, how to effectively analyze user behavior and the real user value? Conventional statistical approaches can mislead our decisions by demonstrating well-behaved average value and drawing some beautiful charts. Therefore, we are in urgent need of mastering an effective method to capture the real user value. Data never lies. However, sometimes the people who analyze the data do not do the appropriate analysis, which leads to the wrong interpretation of the user data! As an efficient data analysis method, cohort analysis is not only suitable for medical research but also of great importance for analyzing diverse groups of people in financial area.
+
+![ cohort flow](./img/cohort%20flow.png)
 
 ## What is cohort analysis in finance application?
 
@@ -13,9 +18,7 @@ A cohort is a subdivision of a user group, which refers to the group of users wi
 
 Cohort analysis can be used in various scenarios in commercial areas, like retention analysis, churn analysis, renewal analysis, and advertising analysis. We take the retention analysis as an example to show how cohort analysis improves effectiveness for retention rate analysis.
 
-<p align="center">
-  <img src="https://github.com/alexxiao007/COOL-site/blob/Cohort-Analysis-for-User-Retention/static/img/Retention.jpeg" width="700" />
-</p>
+![ cohort flow](./img/Retention.jpeg)
 
 ### Acquisition cohorts:
 Suppose your company has two new APPs (APP A, APP B) released in the same period and our task is to decide which APP should be put more energy on. The user data are shown in Table 1 and Table 2, which consists of the number of new users and the retention in each month. The retention rate is defined as the ratio of customers who are still frequently using this APP. So how to read this table? Firstly, let us look at the first row of data, in which there are 100 new registrations in the first month and 95 users remaining in the second month. In the third month, 3 more users fall away. By that analogy, the number of retentions is 45 in the 9th month. We can analyze the other row data in the same way. Then we can calculate the retention rate for each month and obtain Table 2. 2. We can know the trend of retention rate for each group of newly registered users from each row. And beyond that, we can compare the retention rate of separate groups in the column domain.
