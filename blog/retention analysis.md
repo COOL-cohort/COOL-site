@@ -39,9 +39,9 @@ Another popular method to group the users is based on the behaviors. For example
 
 Behavioral cohort analysis results for core feature X and core feature Y.
 
-![ Behavioral cohort ](./img/behavioral_cohort_1.PNG)
+![ Behavioral cohort ](./img/behavioral_cohort_1.png)
 
-![ Behavioral cohort ](./img/behavioral_cohort_2.PNG)
+![ Behavioral cohort ](./img/behavioral_cohort_2.png)
 
 The above two tables show that the retention rate in the first table drops rapidly, which means that users does not like this core feature. Therefore, we need to improve this core feature as soon as possible.
 Compared to acquisition cohort, behavioral cohort depends more on the characteristics of the product and should be able to capture more valuable user information if it is utilized effectively. 
