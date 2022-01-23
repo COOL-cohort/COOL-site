@@ -1,6 +1,6 @@
 ---
 title: Cohort Analysis on Finance Application
-authors: [xiaofei]
+authors: [xiaofei, qingpengsc]
 tags: [cohort analysis, application, finance]
 
 ---
@@ -29,10 +29,10 @@ Suppose your company has two new products (Product A, Product B) released in the
 
 In this cohort analysis example, the **cohort query** are:
 
-- **user selection**: the users who have an account in this product;
-- **birth criteria**: the user is selected only if this user register an account in this product;
+- **User selection**: the users who have an account in this product;
+- **Birth criteria**: the user is selected only if this user register an account in this product;
 - **Group by**: the time when the user registers this account;
-- **cohort matrix**: the times of users' login actions in the following days.
+- **Cohort matrix**: the times of users' login actions in the following days.
 
 In the first few months, the retention rate of A is higher than that of B, and the simple conclusion is that Product A is more popular than Product B. Conversely, if we take a long-term view, we find that the retention rate of Product A continues to decline, while the retention rate of Product B slowly converges to a certain value. The retention trend of an excellent product should have the following characteristics:
 
@@ -66,10 +66,10 @@ Compared to the acquisition cohort, the behavioral cohort depends more on the ch
 
 In this cohort analysis example, the **cohort query** are:
 
-- **user selection**: the users who have registered this account in this product;
-- **birth criteria**: the user is selected only if this user uses the feature X at least once (times is predefined by users);
+- **User selection**: the users who have registered this account in this product;
+- **Birth criteria**: the user is selected only if this user uses the feature X at least once (times is predefined by users);
 - **Group by**: the date when the user uses the feature X for the first time;
-- **cohort matrix**: the times of users' login actions in a predefined time interval.
+- **Cohort matrix**: the times of users' login actions in a predefined time interval.
 
 The strength of cohort analysis is that it can not only demonstrate how people like the product but also tell us why they use or leave our product. Cohort analysis can help us to identify the merits and demerits of the product in different views, thus showing us the way to make a good product.
 to acquisition cohort, behavioral cohort depends more on the characteristics of the product and should be able to capture more valuable user information if it is utilized effectively. 
