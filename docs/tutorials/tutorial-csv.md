@@ -1,3 +1,8 @@
+---
+id: tutorial-csv
+title: Turorial-CSV
+tags: [data-loader]
+---
 This tutorials shows a complete example of using a local COOL package to load the sample sogamo csv dataset and executes a query.
 
 After building the COOL system, under the root directory, execute the following command will ingest the sogamo dataset to COOL system.
