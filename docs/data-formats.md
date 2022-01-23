@@ -1,5 +1,17 @@
+---
+id: DataLoader
+title: Data Formats
+tags: [data-loader]
+---
+
+
 # Data Formats
-COOL uses a native column-oriented data format to facilitates cohort and analytical queries. The storage hierarchy is summarized in the figure. ![figure](assets/data-format-cool.svg "COOL storage hierarchy") A COOL Instance stores a dataset as a set of data tables under a directory. Each data table corresponds to a subdirectory and it is horizontally partitioned into cublets, which follows the storage layout shown in the figure. A cublet is further horizotally partitioned into chunks. Within each chunk, data are stored by column, and metadata and indexes are built to speed up queries. For each table, a yaml file is needed to specify its schema. An example directory structure is shown here:
+COOL uses a native column-oriented data format to facilitates cohort and analytical queries. The storage hierarchy is summarized in the figure. 
+
+![figure](assets/data-format-cool.svg "COOL storage hierarchy") 
+
+A COOL Instance stores a dataset as a set of data tables under a directory. Each data table corresponds to a subdirectory and it is horizontally partitioned into cublets, which follows the storage layout shown in the figure. A cublet is further horizotally partitioned into chunks. Within each chunk, data are stored by column, and metadata and indexes are built to speed up queries. For each table, a yaml file is needed to specify its schema. An example directory structure is shown here:
+
 ```
 dataset
 ├── cube-0

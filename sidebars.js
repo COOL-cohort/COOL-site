@@ -19,22 +19,12 @@ const sidebars = {
   // But you can create a sidebar manually
   docs: [
       'introduction',
+      'DataLoader',
       {
           type: "category",
-          label: "Markdown Features",
+          label: "Tutorials",
           items: [
-              'markdown-features/md-template',
-              'markdown-features/mdx-template',
-              // "markdown-features/react",
-              "markdown-features/tabs",
-              "markdown-features/code-blocks",
-              "markdown-features/admonitions",
-              "markdown-features/headings",
-              "markdown-features/inline-toc",
-              "markdown-features/assets",
-              "markdown-features/plugins",
-              "markdown-features/math-equations",
-              "markdown-features/head-metadata",
+              'tutorials/tutorial-csv'
           ]
       },
   ]
