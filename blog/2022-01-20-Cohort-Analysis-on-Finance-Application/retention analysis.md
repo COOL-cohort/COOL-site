@@ -8,7 +8,7 @@ tags: [cohort analysis, finance]
 # Cohort Analysis on Finance Application
 Given a set of user data for a new product, how to effectively analyze user behavior and the real user value? Conventional statistical approaches may mislead our decisions by demonstrating well-behaved average value and drawing some beautiful charts. Therefore, we are in urgent need of mastering an effective method to capture the real user value. Data never lies. However, sometimes the people who analyze the data do not do the appropriate analysis, which leads to the wrong interpretation of the user data! As an efficient data analysis method, cohort analysis is not only suitable for medical research but also of great importance for analyzing diverse groups of people in financial area.
 
-![ cohort flow](./img/cohort%20flow.png)
+![ cohort flow](blog/2022-01-20-Cohort-Analysis-on-Finance-Application/img2022-01-20-Cohort-Analysis-on-Finance-Application/img/cohort flow.png)
 
 ## What is cohort analysis in finance application?
 
@@ -19,10 +19,10 @@ A cohort is a subdivision of a user group, which refers to the group of users wi
 Cohort analysis can be used in various scenarios in commercial areas, like retention analysis, churn analysis, renewal analysis, and advertising analysis. We take the retention analysis as an example to show how cohort analysis improves effectiveness for retention rate analysis.
 
 Retention table for Product A.
-![ cohort flow](./img/Table_1.PNG)
+![ cohort flow](blog/2022-01-20-Cohort-Analysis-on-Finance-Application/img2022-01-20-Cohort-Analysis-on-Finance-Application/img/Table_1.PNG)
 
 Retention table for Product B.
-![ cohort flow](./img/Table_2.PNG)
+![ cohort flow](blog/2022-01-20-Cohort-Analysis-on-Finance-Application/img2022-01-20-Cohort-Analysis-on-Finance-Application/img/Table_2.PNG)
 
 ### Acquisition cohorts:
 Suppose your company has two new products (Product A, Product B) released in the same period and our task is to predict which Product should be put more effort on. The user data are shown in above two ables, which consists of the retention rate of two products in each month. The retention rate is defined as the ratio of customers who are still frequently using this product. So how to read this table? Firstly, let us look at the first row of data, in which there are 100% new registrations in the first month and about 95% of users remaining in the second month. In the third month, 3% of the users fall away. By that analogy, the number of retentions rate is about 45% in the 9th month. We can analyze the other row data in the same way. We can know the trend of retention rate for each group of newly registered users from each row. And beyond that, we can compare the retention rate of separate groups in the column domain. In this cohort analysis example, the cohort query are:
@@ -43,9 +43,9 @@ Another popular method to group the users is based on the behaviors. For example
 
 Behavioral cohort analysis results for core feature X and core feature Y.
 
-![ Behavioral cohort ](./img/behavioral_cohort_1.png)
+![ Behavioral cohort ](blog/2022-01-20-Cohort-Analysis-on-Finance-Application/img2022-01-20-Cohort-Analysis-on-Finance-Application/img/behavioral_cohort_1.png)
 
-![ Behavioral cohort ](./img/behavioral_cohort_2.png)
+![ Behavioral cohort ](blog/2022-01-20-Cohort-Analysis-on-Finance-Application/img2022-01-20-Cohort-Analysis-on-Finance-Application/img/behavioral_cohort_2.png)
 
 The above two tables show that the retention rate in the first table drops rapidly, which means that users does not like this core feature. Therefore, we need to improve this core feature as soon as possible.
 Compared to acquisition cohort, behavioral cohort depends more on the characteristics of the product and should be able to capture more valuable user information if it is utilized effectively. 
