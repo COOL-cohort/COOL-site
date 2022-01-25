@@ -7,14 +7,14 @@ This tutorials shows a complete example of using a local COOL package to load th
 
 After building the COOL system, under the root directory, execute the following command will ingest the sogamo dataset to COOL system.
 ```bash
-java -cp ./target/cool-0.1-SNAPSHOT.jar com.nus.cool.loader.LocalLoader sogamo sogamo/table.yaml sogamo/dim_test.csv sogamo/test.csv ./test 65536
+java -jar cool-examples/load-csv/target/load-csv-0.1-SNAPSHOT.jar sogamo sogamo/table.yaml sogamo/dim_test.csv sogamo/test.csv ./test
 ```
 The command indicates that we use the LocalLoader to load the sogamo dataset. 
 * `sogamo`: name of the dataset
 * `sogamo/table.yaml`: the table.yaml describing the table schema
 * `sogamo/dim_test.csv`: the dimension file 
+* `sogamo/test.csv`: the raw data in csv format
 * `test`: the output directory to store the converted dataset 
-*  65536 (i.e. 64KB) chunk size for COOL [cublet](../data-formats.md)
 
 A directory named `test` appears containing the converted dataset. It contains one table named sogamo and the table has one cublet.
 ```
