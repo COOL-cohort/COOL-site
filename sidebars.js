@@ -18,6 +18,14 @@ const sidebars = {
 
   // But you can create a sidebar manually
   docs: [
+    {
+        type: "category",
+        label: "Getting started",
+        items: [
+            'Getting started/introduction',
+            'Getting started/Quickstart',
+        ]
+    },
       'introduction',
       'DataLoader',
       {
@@ -27,6 +35,7 @@ const sidebars = {
               'tutorials/tutorial-csv'
           ]
       },
+      
   ]
 };
 
