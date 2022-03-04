@@ -32,4 +32,10 @@ The common applications of COOL are:
 7. **Artificial Intelligence Model.** Utilize COOL's cohort results and findings to facilitate building artificial intelligence models.
 
 ## When Should I Use COOL?
-
+In some real applications, you need to compare the behaviors between different groups of users (customers, patients, or physical systems) and study the time serires characteristics. Therefoer, you will use cohort query to explore the user behavioral patterns from two perspectives, i.e. aging and social changes. More specifically, COOL is the perfect system for you if you have any requirements as follows:
+1. **Time series data analytics.** For the time series data, cohort analysis will analyze its behavioral patterns and make predictions for future behavior.
+2. **Data is easy to group.** If the data is easy to group by the birth (age for patients, registration for accounts), or event(patients taking a medicine, or buyers purchasing one product), cohort query in COOL will perform much fast than other OLAP systems. 
+3. **The application require real-time reponse.** COOL provide real-time reponse for the cohort query and conventional OLAP queries, thus suitable for the online system.  
+4. **Deal with various data format.** COOL support various data format and will automatically convert the input data to native storage format. 
+5. **System need to be scalable.** 
+6. To be continued.
