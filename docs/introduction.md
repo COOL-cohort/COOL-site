@@ -39,3 +39,12 @@ In some real applications, you need to compare the behaviors between different g
 4. **Deal with various data format.** COOL support various data format and will automatically convert the input data to native storage format. 
 5. **System need to be scalable.** 
 6. To be continued.
+
+## Architecture
+### Single-node architecture
+The single-node architecture of Cool have six components in the system as illustrated in Figure 1, consisting of loader, controller, parser, planner, compressor and executor. The key components are detailed as follows:
+1. **Data Model**
+2. **Storage Layout**
+3. **Query Processing**
+
+### Distributed architecture
