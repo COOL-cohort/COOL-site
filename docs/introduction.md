@@ -5,6 +5,9 @@ title: Welcome
 tags: [welcome]
 ---
 
+# What is cohort analysis
+# why do we need cohort analysis
+
 # Introduction to COOL
 
 Apache COOL is an online cohort analytical processing system that supports various types of data analytics, including cube query, iceberg query and cohort query. The objective of COOL is to provide high performance (near real-time) analytical response for emerging data warehouse domain.
@@ -42,9 +45,13 @@ In some real applications, you need to compare the behaviors between different g
 
 ## Architecture
 ### Single-node architecture
-The single-node architecture of Cool have six components in the system as illustrated in Figure 1, consisting of loader, controller, parser, planner, compressor and executor. The key components are detailed as follows:
+The single-node architecture of Cool have six components in the system as illustrated in the following Figure, consisting of loader, controller, parser, planner, compressor and executor. The key components are detailed as follows:
+
+Cool Single-node System Architecture.
+![architecture](./img/Single_node_architecture.PNG)
+
 1. **Data Model**
-2. **Storage Layout**
-3. **Query Processing**
+1. **Storage Layout**
+2. **Query Processing**
 
 ### Distributed architecture
