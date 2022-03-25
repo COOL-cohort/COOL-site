@@ -10,7 +10,7 @@ Although cohort analysis has been widely used in many different areas, most of t
 # HealthCare
 Cohort analysis can be used in healthcare to analyze electronic medical records and investigate the therapeutic effect of drugs. We can take the medication analysis in COVID-19 as an example to show how to conduct cohort analysis. Firstly, we select the patients with COVID-19 as the main group. Divide this group by treatment locations (isolation ward or ICU). Find different recovering time among the patients in different age groups from taking a certain medication. In this case, we can explore the average healing time from taking medication to recovery among patients of different age groups. From these visualization results (Figure 1 and Figure 2), we could find that this kind of drug works well on the age 60-69 group.
 
-![architecture](./img/Single_node_architecture.PNG)
+![healing time](./img/healing_time.PNG)
 Figure 1. The healing time of the patient in ICU after taking the medication.
 
 ![architecture](./img/Single_node_architecture.PNG)
