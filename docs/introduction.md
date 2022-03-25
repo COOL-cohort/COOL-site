@@ -6,12 +6,18 @@ tags: [welcome]
 ---
 
 # What is cohort analysis
-# why do we need cohort analysis
+A cohort is a subdivision of a user group, which refers to the group of users with common behavior characteristics in a specified time. Cohort analysis is a behavioral analysis method which breaks the data into several data set and conduct data analysis over the obtained groups. These groups are called cohorts and all the elements within the same cohort usually share common characteristics or experiences within a defined time-span.
+Unlike the traditional statistical analysis of data, in which an average value of the whole data only shows us unreal pictures, cohort analysis allows us to learn the sophisticated data patterns across the life-cycle of a user. By learning these behavioral patterns of time, we can adapt and tailor its service to those specific cohorts. Cohort analysis can be used in big data and business analytics, such as healthcare, finance, CRM (Customer Relationship Management) analytics, and fraud Detection.
+
+# Why do we need cohort analysis
+Cohort analysis is of great importance since it can provide the specificity of the data information and capture users' behavioral patterns which cannot be learned by traditional data analytics. It can help us to get correct answers easily to targeted questions by analyzing the relevant data. The adavantages of cohort anaglsis are listed as follows:
+- Cohort analysis can make you know how user behaviors affect your business. Even though you don't transform data into the corresponding business metrics, like user acquisition and retention, you can learn how users take actions in the cohort.
+- Cohort analysis allows us to identify relationships between the characteristics of a population and that population's behavior. For those user with missing features, cohort analysis can help to aggregate other users' features within the same cohort.
 
 # Introduction to COOL
 
-Apache COOL is an online cohort analytical processing system that supports various types of data analytics, including cube query, iceberg query and cohort query. The objective of COOL is to provide high performance (near real-time) analytical response for emerging data warehouse domain.
-COOL is a cohort OLAP system specialized for cohort analysis with extremely low latency. As the first OLAP system, which can process both cohort queries and conventional OLAP queries, COOL outperforms other systems by a wide margin in single-node setting. Its multi-node version can also beat other systems by one order of magnitude in terms of query latency.
+Apache COOL is an online cohort analytical processing system that supports various types of data analytics, including cube query, iceberg query and cohort query. The objective of COOL is to provide high performance (near real-time) analytical response for emerging data warehouse domain. 
+COOL is a cohort OLAP system specialized for cohort analysis with extremely low latency, thus suitable for large-scale user behavior analysis. As the first OLAP system, which can process both cohort queries and conventional OLAP queries, COOL outperforms other systems by a wide margin in single-node setting. Its multi-node version can also beat other systems by one order of magnitude in terms of query latency. By utilising COOL, you can quickly get clear and explainable user behavioral analytical results which can be used for further downstream tasks. Based on the user behavior analysis, COOL can be widely applied in various areas.
 
 The common applications of COOL are:
 
@@ -44,6 +50,7 @@ In some real applications, you need to compare the behaviors between different g
 6. To be continued.
 
 ## Architecture
+
 ### Single-node architecture
 The single-node architecture of Cool have six components in the system as illustrated in the following Figure, consisting of loader, controller, parser, planner, compressor and executor. The key components are detailed as follows:
 
