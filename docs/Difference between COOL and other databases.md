@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-id: concept
-title: concept
+id: advantages
+title: advantages
 tags: [welcome]
 ---
 
@@ -9,10 +9,68 @@ tags: [welcome]
 The design of OLAP systems cannot serve modern applications well due to their inefficiency in processing complex queries such as cohort queries with low query latency. As a cohort online analytical processing system, COOL can support several newly proposed operators on top of a sophisticated storage layer and processes both cohort queries and conventional OLAP queries with superb performance. Its distributed design contains minimal load balancing and fault tolerance support and is scalable. 
 
 ## Cohort Query in COOL
-COOL system allows users to perform cohort query to gain behavioral data of users in different groups. COOL supports aggregations on cohorts born with a series of events, namely an event sequence, along either a fixed time window or an elastic time window delimited by given events. The execution of a cohort query is divided into three steps: 
+COOL system allows users to perform cohort query to gain behavioral data of users in different groups. The difference of processing flow for OLAP queries and cohort queries are showned in the following table.
+
+<table>
+    <tr>
+        <td><b>Methods <b></td> 
+        <td style="text-align:center"><b>OLAP Queries<b></td> 
+        <td style="text-align:center"><b>Cohort Queries<b></td> 
+    </tr>
+    <tr>
+  		 <td><i>step 1<i></td> 
+      	 <td colspan="2" style="text-align:center">Receive the execution plan produced by the planner</td>    
+    </tr>
+    <tr>
+        <td><i>step 2<i></td> 
+        <td colspan="2"style="text-align:center">Fetch a cublet from the specified data source</td>    
+    </tr>
+    <tr>
+        <td><i>step 3<i></td> 
+        <td>Run metaChunk selector to scan metaChunk, checking whether the cublet contains the candidate values</td> 
+        <td>Run birth selector to scan metaChunk, checking whether the cublets contain the events in the birth event sequence</td> 
+    </tr>
+    <tr>
+        <td><i>step 4<i></td> 
+        <td>Go to Step (2) if there is no value matched in metaChunk</td> 
+        <td>Go to Step (2) if there is no event matched in metaChunk</td> 
+    </tr>
+    <tr>
+        <td><i>step 5<i></td> 
+        <td>Run dataChunk selector to scan dataChunk locating matched records</td> 
+        <td>Run birth selector to scan dataChunk locating the birth users</td> 
+    </tr>
+    <tr>
+        <td><i>step 6<i></td> 
+        <td>Call aggregators on the scanning result for dataChunk and collect the aggregation values into groups</td> 
+        <td>Run age selector to calculate ages</td> 
+    </tr>
+    <tr>
+        <td><i>step 7<i></td> 
+        <td> - </td> 
+        <td>Run cohort aggregator to aggregate different cohorts from the users</td> 
+    </tr>
+    <tr>
+        <td><i>step 8<i></td> 
+        <td colspan="2" style="text-align:center">Repeat Step (2) - (7) until all cublets are processed</td> 
+    </tr>
+    <tr>
+        <td><i>step 9<i></td> 
+        <td colspan="2" style="text-align:center">Run birth selector to scan metaChunk checking whether the cublets contain the events in the birth event sequence</td> 
+    </tr>
+    <tr>
+        <td><i>step 10<i></td> 
+        <td>Output the final results</td> 
+        <td>Output the cohort aggregation results</td> 
+    </tr>
+</table>
+
+COOL supports aggregations on cohorts born with a series of events, namely an event sequence, along either a fixed time window or an elastic time window delimited by given events. The execution of a cohort query is divided into three steps: 
 - Find birth user cohort, which is to locate users experiencing similar given events or characteristics and group them into corresponding cohorts.
 - Calculate the ages of the users in the cohorts, which is to, for each user in the cohort,cut the corresponding records into diverse segments by given delimiters along time axis.
 - Aggregate the metrics, which is to measure the value on each segment by a given aggregator.
+
+COOL not only support OLAP queries, but also provide more efficient cohort queries to replace the functions of metaChunk selector and dataChunk selector. As shown in the above table, three cohort queries operators: birth selector, age selector and cohort aggregator are employed. Apart from this, the new storage in COOL optimise the queries in space and timing.
 
 As an OLAP system which provide cohort queries operators for users, COOL demonstrates an extraordinary performance in terms of scalability and efficiency compared to existing cohort queries engines and traditional OLAP systems.
 
