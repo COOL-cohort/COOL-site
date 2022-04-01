@@ -1,36 +1,25 @@
 ---
 sidebar_position: 1
 id: introduction
-title: Welcome
+title: Introduction to COOL
 tags: [welcome]
 ---
 
-# What is cohort analysis
-A cohort is a subdivision of a user group, which refers to the group of users with common behavior characteristics in a specified time. Cohort analysis is a behavioral analysis method which breaks the data into several data set and conduct data analysis over the obtained groups. These groups are called cohorts and all the elements within the same cohort usually share common characteristics or experiences within a defined time-span.
-Unlike the traditional statistical analysis of data, in which an average value of the whole data only shows us unreal pictures, cohort analysis allows us to learn the sophisticated data patterns across the life-cycle of a user. By learning these behavioral patterns of time, we can adapt and tailor its service to those specific cohorts. Cohort analysis can be used in big data and business analytics, such as healthcare, finance, CRM (Customer Relationship Management) analytics, and fraud Detection.
+COOL is a cohort OLAP system specialized for cohort analysis with extremely low latency, thus suitable for large-scale user behavior analysis.
+The vision of COOL is to address the inefficiency of underlying database systems processing cohort analysis (cohort queries) that is an emerging and widely-used analysis pattern in various areas. 
+In COOL, cohort query processing is facilitated by specialized operators that involve only two fast scans on a sophisticated storage to achieve near real-time response.
+By utilizing COOL, we can quickly get clear and explainable user behavioral analytical results which can be used for further downstream tasks. 
 
-# Why do we need cohort analysis
-Cohort analysis is of great importance since it can provide the specificity of the data information and capture users' behavioral patterns which cannot be learned by traditional data analytics. It can help us to get correct answers easily to targeted questions by analyzing the relevant data. The adavantages of cohort anaglsis are listed as follows:
-- Cohort analysis can make you know how user behaviors affect your business. Even though you don't transform data into the corresponding business metrics, like user acquisition and retention, you can learn how users take actions in the cohort.
-- Cohort analysis allows us to identify relationships between the characteristics of a population and that population's behavior. For those user with missing features, cohort analysis can help to aggregate other users' features within the same cohort.
-
-# Introduction to COOL
-
-Apache COOL is an online cohort analytical processing system that supports various types of data analytics, including cube query, iceberg query and cohort query. The objective of COOL is to provide high performance (near real-time) analytical response for emerging data warehouse domain. 
-COOL is a cohort OLAP system specialized for cohort analysis with extremely low latency, thus suitable for large-scale user behavior analysis. As the first OLAP system, which can process both cohort queries and conventional OLAP queries, COOL outperforms other systems by a wide margin in single-node setting. Its multi-node version can also beat other systems by one order of magnitude in terms of query latency. By utilising COOL, you can quickly get clear and explainable user behavioral analytical results which can be used for further downstream tasks. Based on the user behavior analysis, COOL can be widely applied in various areas.
-
-The common applications of COOL are:
-
-- To be continued.
-- **Healthcare.**
-- **Customer Relationship Management (CRM) Analytics.**
+Based on the user behavior analysis, COOL can be widely applied in various areas:
+- **Healthcare Analytics**
 - **Electronic medical record analysis**
+- **Customer Relationship Management (CRM) Analytics**
 - **Retention analysis in financial area**
 - **Anomaly detection in physical system**
 - **Anti-fraud in e-commerce platform**
 - **Advertising analytics**
 
-## Key features of COOL
+### Key features of COOL
 
 1. **Easy to use.** COOL provides user-friendly API, thus allowing users to easily deploy a web app to utilize COOL on local or on cloud via docker.
 2. **Near Real-time Responses.** COOL is highly efficient, and therefore, can process cohort queries in near real-time analytical responses.
@@ -38,27 +27,40 @@ The common applications of COOL are:
 4. **Specialized Storage Layout.** A specialized storage layout is designed for fast query processing and reduced space consumption.
 5. **Self-designed Semantics.** There are some novel self-designed semantics for the cohort query, which can simplify its complexity and improve its functionality.
 6. **Flexible Integration.** Since COOL supports various types of data, it can be integrated with other data systems via common data formats e.g., CSV, Parquet, Avro, and Arrow. This also makes COOL suitable for many different application scenarios.
-7. **Artificial Intelligence Model.** Utilize COOL's cohort results and findings to facilitate building artificial intelligence models.
+7. **Artificial Intelligence Model.** COOL can learn comprehensive cohort behavior representations to facilitate further artificial intelligence models development.
 
-## When Should I Use COOL?
-In some real applications, you need to compare the behaviors between different groups of users (customers, patients, or physical systems) and study the time serires characteristics. Therefoer, you will use cohort query to explore the user behavioral patterns from two perspectives, i.e. aging and social changes. More specifically, COOL is the perfect system for you if you have any requirements as follows:
-1. **Time series data analytics.** For the time series data, cohort analysis will analyze its behavioral patterns and make predictions for future behavior.
-2. **Data is easy to group.** If the data is easy to group by the birth (age for patients, registration for accounts), or event(patients taking a medicine, or buyers purchasing one product), cohort query in COOL will perform much fast than other OLAP systems. 
-3. **The application require real-time reponse.** COOL provide real-time reponse for the cohort query and conventional OLAP queries, thus suitable for the online system.  
-4. **Deal with various data format.** COOL support various data format and will automatically convert the input data to native storage format. 
-5. **System need to be scalable.** 
-6. To be continued.
+Different from the traditional statistical analysis where analytical results are too rough to reveal meaningful data patterns, COOL is specialized for cohort analysis which allows us to learn the sophisticated data patterns across the life-cycle of users.
 
-## Architecture
+### What it cohort analysis?
+Cohort analysis is of great importance since it can provide the specificity of the data information and capture comprehensive users' behavioral patterns which cannot be learned by traditional statistical analytics.
+In detail, users are usually divided into different cohorts where they share common behavior characteristics in a specific time period, such as the patients who have taken a certain medicine or the customers who register on the same day. 
+The purpose of the cohort analysis is to visually display the common activities of specific cohorts at different stages in their life-cycles, and compare them with other cohorts at the same stage.
 
-### Single-node architecture
-The single-node architecture of Cool have six components in the system as illustrated in the following Figure, consisting of loader, controller, parser, planner, compressor and executor. The key components are detailed as follows:
+Therefore, cohort analysis is valuable because it can provide fine-grained analytical results about each specific cohort's behavior activities by only investigating the relevant data. It allows companies to know how user behaviors affect their business, and hence, optimize their own conversion funnel.
 
-Cool Single-node System Architecture.
-![architecture](./img/Single_node_architecture.PNG)
+### Why do we need COOL?
 
-1. **Data Model**
-1. **Storage Layout**
-2. **Query Processing**
+When conducting cohort analysis, response time and the complexity of the cohort query are two essential considerations that will influence the effectiveness of downstream applications.
+- **Need for low response time.** When conducting consumer retention analysis, we observe the growth of users alongside running the user acquisition or observe player progression in online gaming to evaluate how different groups of players evolve at different time stages. The efficiency of cohort query processing is vital in such a scenario as analysts may have to work out strategies promptly for the online service.
+- **Need for simplicity of cohort query.** In healthcare, cohort analysis can evaluate the side-effect of a clinical trial, in which the clinicians want to monitor and determine the effectiveness of new medicines among different patient groups. However, it is difficult for any clinician to construct complex cohort queries (using SQL) to conduct cohort analysis. Specifically, at least five SQL queries are needed for a conventional OLAP database system to perform cohort analysis in a non-intrusive manner.
 
-### Distributed architecture
+To tackle these two challenges, COOL system has been designed as a very efficient cohort analytical processing system **with near real-time response time** and **flexible definition of cohorts and events**.
+It is at least one order of magnitude faster than cohort processing using a conventional database engine.
+For ease of use, COOL accepts a single self-defined query in JSON format, rather than multiple complex SQL statements.
+
+
+### When to use COOL?
+
+COOL has been used for various real-world applications, such as sales of online game gadgets/equipment, sales of virtual assets and gears in online games, and drug side-effects in medical analysis. Cohort analysis is of great importance since it can provide the specificity of the data information and capture users' behavioral patterns which cannot be learned by traditional data analytics.
+More specifically, COOL is the perfect system for you if you have any requirements as follows:
+1. **Temporal behavior analytics.** Want to learn user behavioral patterns from time-series data.
+2. **Need for grouping.** Want to split users into several groups by demographic information or events before conducting conduct analysis.
+3. **The application requires real-time responses.** Want near real-time responses for processing cohort queries and conventional OLAP queries.
+4. **Easy to use.** Want the cohort queries to be defined easily and flexibly.
+5. **Scalability.** Want the system to be scalable
+6. **Deal with various data formats.** Want to load the data from various data formats.
+
+### Learn more 
+- Try the COOL Quickstart
+- Learn more from COOL tutorials
+- Read the academic research papers to learn COOL in details.
