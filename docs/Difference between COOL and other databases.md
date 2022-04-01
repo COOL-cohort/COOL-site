@@ -11,59 +11,6 @@ The design of OLAP systems cannot serve modern applications well due to their in
 ## Cohort Query in COOL
 COOL system allows users to perform cohort query to gain behavioral data of users in different groups. The difference of processing flow for OLAP queries and cohort queries are showned in the following table.
 
-<table>
-    <tr>
-        <td><b>Methods <b></td> 
-        <td style="text-align:center"><b>OLAP Queries<b></td> 
-        <td style="text-align:center"><b>Cohort Queries<b></td> 
-    </tr>
-    <tr>
-  		 <td><i>step 1<i></td> 
-      	 <td colspan="2" style="text-align:center">Receive the execution plan produced by the planner</td>    
-    </tr>
-    <tr>
-        <td><i>step 2<i></td> 
-        <td colspan="2"style="text-align:center">Fetch a cublet from the specified data source</td>    
-    </tr>
-    <tr>
-        <td><i>step 3<i></td> 
-        <td>Run metaChunk selector to scan metaChunk, checking whether the cublet contains the candidate values</td> 
-        <td>Run birth selector to scan metaChunk, checking whether the cublets contain the events in the birth event sequence</td> 
-    </tr>
-    <tr>
-        <td><i>step 4<i></td> 
-        <td>Go to Step (2) if there is no value matched in metaChunk</td> 
-        <td>Go to Step (2) if there is no event matched in metaChunk</td> 
-    </tr>
-    <tr>
-        <td><i>step 5<i></td> 
-        <td>Run dataChunk selector to scan dataChunk locating matched records</td> 
-        <td>Run birth selector to scan dataChunk locating the birth users</td> 
-    </tr>
-    <tr>
-        <td><i>step 6<i></td> 
-        <td>Call aggregators on the scanning result for dataChunk and collect the aggregation values into groups</td> 
-        <td>Run age selector to calculate ages</td> 
-    </tr>
-    <tr>
-        <td><i>step 7<i></td> 
-        <td> - </td> 
-        <td>Run cohort aggregator to aggregate different cohorts from the users</td> 
-    </tr>
-    <tr>
-        <td><i>step 8<i></td> 
-        <td colspan="2" style="text-align:center">Repeat Step (2) - (7) until all cublets are processed</td> 
-    </tr>
-    <tr>
-        <td><i>step 9<i></td> 
-        <td colspan="2" style="text-align:center">Run birth selector to scan metaChunk checking whether the cublets contain the events in the birth event sequence</td> 
-    </tr>
-    <tr>
-        <td><i>step 10<i></td> 
-        <td>Output the final results</td> 
-        <td>Output the cohort aggregation results</td> 
-    </tr>
-</table>
 
 COOL supports aggregations on cohorts born with a series of events, namely an event sequence, along either a fixed time window or an elastic time window delimited by given events. The execution of a cohort query is divided into three steps: 
 - Find birth user cohort, which is to locate users experiencing similar given events or characteristics and group them into corresponding cohorts.
