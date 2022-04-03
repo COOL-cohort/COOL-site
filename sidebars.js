@@ -42,6 +42,13 @@ const sidebars = {
             ]
         },
         {
+            type: 'category',
+            label: 'Querying',
+            items: [
+                'querying/cohort-query',
+            ]
+        },
+        {
             type: "category",
             label: "Tutorials",
             items: [
@@ -50,22 +57,29 @@ const sidebars = {
         },
         'application/application',
         {
-            type: "category",
-            label: "Markdown Features",
+            type: 'category',
+            label: 'Publications',
             items: [
-                'markdown-features/mdx-template',
-                // "markdown-features/react",
-                "markdown-features/tabs",
-                "markdown-features/code-blocks",
-                "markdown-features/admonitions",
-                "markdown-features/headings",
-                "markdown-features/inline-toc",
-                "markdown-features/assets",
-                "markdown-features/plugins",
-                "markdown-features/math-equations",
-                "markdown-features/head-metadata",
+                'publication/paper',
             ]
         },
+        // {
+        //     type: "category",
+        //     label: "Markdown Features",
+        //     items: [
+        //         'markdown-features/mdx-template',
+        //         // "markdown-features/react",
+        //         "markdown-features/tabs",
+        //         "markdown-features/code-blocks",
+        //         "markdown-features/admonitions",
+        //         "markdown-features/headings",
+        //         "markdown-features/inline-toc",
+        //         "markdown-features/assets",
+        //         "markdown-features/plugins",
+        //         "markdown-features/math-equations",
+        //         "markdown-features/head-metadata",
+        //     ]
+        // },
     ]
 };
 
