@@ -28,12 +28,24 @@ const sidebars = {
                 'getting-started/quickstart',
             ]
         },
-        'DataLoader',
+        {
+            type: 'category',
+            label: 'Concepts',
+            items: [
+                'Concepts/input-format',
+                'Concepts/data-format',
+                'Concepts/schema',
+                'Concepts/action-time',
+                'Concepts/filters',
+                'Concepts/compression',
+                'Concepts/storage-service'
+            ]
+        },
         {
             type: "category",
-            label: "tutorials",
+            label: "Tutorials",
             items: [
-                'tutorials/tutorial-csv'
+                'tutorials/tutorial-input-format'
             ]
         },
         'application/application',
