@@ -77,7 +77,7 @@ Here, we take the CSV data file as an example to demonstrate how to load a datas
 - **dimension file**: a csv file with "," delimiter. Each line of this file has two fields: the first field is the name of a column in the dataset, and the second field is a value of this column. Each distinct value of each column in the dataset shall appear in this dimension file once.
 - **dataset schema file**: a yaml file specifying the dataset's columns and their measure fields.
 
-More details about these files are contained in the [Data Ingestion Section](./). 
+More details about these files are contained in the [Data Ingestion Section](docs/Concepts/input-format.md). 
 
 Once these files are prepared, we can package our LOAD query into a dictonary.
 
@@ -107,16 +107,15 @@ Now, we can send a request to the server with this LOAD query by the URL `/v1/lo
 
 <TabItem value="Python">
 
-In Python developing environment, we can send the query by the request package/
+In Python developing environment, we can send the query by the `request` package
 
 ```jsx
-requests.post("http://127.0.0.1:8080/v1/load", data='{"dataFileType": "PARQUET", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.parquet", "outputPath": "datasetSource"}').text 
+requests.post("http://127.0.0.1:8080/v1/load", data='{"dataFileType": "CSV", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.csv", "outputPath": "datasetSource"}').text 
 ```
 </TabItem>
 
 <TabItem value="CURL">
 On the command line, we can send a request by the CURL command.
-
 
 curl -X POST -H "Content_Type: text/plain" -d '{"dataFileType": "CSV", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.csv", "outputPath": "datasetSource}'  http://127.0.0.1:8080/v1/load
 
