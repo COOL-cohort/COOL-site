@@ -19,12 +19,24 @@ const sidebars = {
   // But you can create a sidebar manually
   docs: [
       'introduction',
-      'DataLoader',
+      {
+          type: 'category',
+          label: 'Concepts',
+          items: [
+              'Concepts/data-format',
+              'Concepts/schema',
+              'Concepts/action-time',
+              'Concepts/filters',
+              'Concepts/compression',
+              'Concepts/input-format',
+              'Concepts/storage-service'
+          ]
+      },
       {
           type: "category",
           label: "Tutorials",
           items: [
-              'tutorials/tutorial-csv'
+              'tutorials/tutorial-input-format'
           ]
       },
   ]

@@ -1,5 +1,5 @@
 ---
-id: DataFormat
+id: data-format
 title: Data Format
 tags: [data-loader]
 ---
@@ -8,7 +8,7 @@ tags: [data-loader]
 # Data Formats
 COOL uses a native column-oriented data format to facilitates cohort and analytical queries. The storage hierarchy is summarized in the figure. 
 
-![figure](assets/data-format-cool.svg "COOL storage hierarchy") 
+![figure](../assets/data-format-cool.svg "COOL storage hierarchy") 
 
 A COOL Instance stores a dataset as a set of data tables under a directory. Each data table corresponds to a subdirectory and it is horizontally partitioned into cublets, which follows the storage layout shown in the figure. A cublet is further horizotally partitioned into chunks. Within each chunk, data are stored by column, and metadata and indexes are built to speed up queries. For each table, a yaml file is needed to specify its schema. An example directory structure is shown here:
 
@@ -27,7 +27,7 @@ dataset
         └── cublet-1.7z
 ```
 
-COOL supports multiple popular [input data formats](Input-formats.md), from which the system can automatically convert them into native storage format.
+COOL supports multiple popular [input data formats](input-format.md), from which the system can automatically convert them into native storage format.
 
 ## Cublet
 A Cublet is a file with one [MetaChunks](#MetaChunk) and one or more [DataChunks](#DataChunk) to store a group of records. It uses a list of offset to quickly locate each chunk. 

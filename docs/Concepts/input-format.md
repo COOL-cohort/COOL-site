@@ -1,7 +1,7 @@
 ---
 id: input-format
 title: Input Formats
-tags: [data-loader][input-format]
+tags: [data-loader, input-format]
 ---
 
 # Input Formats

@@ -1,7 +1,7 @@
 ---
 id: tutorial-input-format
 title: Turorial-input-format
-tags: [data-loader][input-format]
+tags: [data-loader, input-format]
 ---
 # How to Load Data to COOL
 This tutorials firstly shows a complete example of using a local COOL package to load the sample sogamo csv dataset and executes a query. Then describes briefly how the data in other format can be similarly loaded.

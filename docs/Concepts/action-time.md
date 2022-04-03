@@ -1,7 +1,7 @@
 ---
 id: action-time
 title: ActionTime
-tags: [action-time][schema]
+tags: [action-time, schema]
 ---
 # ActionTime
 Currently, we use [Joda Time](https://www.joda.org/joda-time/) for the [ActionTime](schema.md#actiontime) field. To use other format for time, developers may look into the following classes.
