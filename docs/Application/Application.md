@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-id: Application Scenarios
-title: application scenarios
-tags: [application scenarios]
+id: Application
+title: Applications
+tags: [application]
 ---
 
 Although cohort analysis has been widely used in many different areas, most of these applications are very simple. In most cases, users are divided into different cohorts according to some attributes. For example, in health care scenario, the study of one medicine usually directly divides patients according to their age or birthplace. Then only some simple statistical data of cohorts like average value or sum will be used. Although these are the easiest way to perform cohort analysis, they cannot provide a deeper insight into cohorts to us. To address these limits, COOL provide more complex and precise cohort analysis and is of great importance for the following applications.

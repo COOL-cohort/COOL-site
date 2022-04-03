@@ -1,7 +1,7 @@
 ---
 id: Quickstart
 title: Quickstart
-tags: [Quickstart]
+tags: [introduction]
 ---
 
 # Quickstart

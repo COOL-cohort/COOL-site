@@ -5,6 +5,8 @@
 /build
 /backup
 
+./docs/backup
+
 # Generated files
 .docusaurus
 .cache-loader
