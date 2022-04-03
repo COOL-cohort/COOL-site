@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-id: Application
+id: application
 title: Applications
 tags: [application]
 ---

@@ -34,7 +34,7 @@ COOL requires two additional files besides the csv file that contains raw data.
 * table.yaml: a yaml file that specifies the schema
 * dimension.csv: a csv file that specifies the value range of each dimension
 
-COOL [CSV LocalLoader](https://github.com/COOL-cohort/COOL/blob/main/src/main/java/com/nus/cool/loader/LocalLoader.java) takes these information to parse the csv data and create indexes. Please refer to [Tutorial](docs/Tutorials/tutorial-csv.md) for a complete example.
+COOL [CSV LocalLoader](https://github.com/COOL-cohort/COOL/blob/main/src/main/java/com/nus/cool/loader/LocalLoader.java) takes these information to parse the csv data and create indexes. Please refer to [Tutorial](docs/tutorials/tutorial-csv.md) for a complete example.
 
 ## Parquet
 Similar to the CSV format support, COOL requires a yaml file that specifies the schema and a dimension file. To use the Parquet loader, the parquet-extensions module is needed. 

@@ -24,19 +24,36 @@ const sidebars = {
             type: "category",
             label: "Getting started",
             items: [
-                'GettingStarted/Introduction',
-                'GettingStarted/Quickstart',
+                'getting-started/introduction',
+                'getting-started/quickstart',
             ]
         },
         'DataLoader',
         {
             type: "category",
-            label: "Tutorials",
+            label: "tutorials",
             items: [
-                'Tutorials/tutorial-csv'
+                'tutorials/tutorial-csv'
             ]
         },
-        'Application/Application',
+        'application/application',
+        {
+            type: "category",
+            label: "Markdown Features",
+            items: [
+                'markdown-features/mdx-template',
+                // "markdown-features/react",
+                "markdown-features/tabs",
+                "markdown-features/code-blocks",
+                "markdown-features/admonitions",
+                "markdown-features/headings",
+                "markdown-features/inline-toc",
+                "markdown-features/assets",
+                "markdown-features/plugins",
+                "markdown-features/math-equations",
+                "markdown-features/head-metadata",
+            ]
+        },
     ]
 };
 
