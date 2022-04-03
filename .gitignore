@@ -6,6 +6,7 @@
 /backup
 
 ./docs/backup
+./docs/Markdown-features
 
 # Generated files
 .docusaurus

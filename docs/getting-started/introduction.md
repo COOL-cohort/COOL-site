@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-id: Introduction
+id: introduction
 title: Introduction to COOL
 tags: [introduction]
 ---
@@ -64,6 +64,6 @@ More specifically, COOL is the perfect system for you if you have any requiremen
 6. **Deal with various data formats.** Want to load the data from various data formats.
 
 ### Learn more 
-- Try the COOL Quickstart
+- Try the COOL [Quickstart](docs/getting-started/quickstart.md)
 - Learn more from COOL tutorials
 - Read the academic research papers to learn COOL in details.
