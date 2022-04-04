@@ -64,6 +64,6 @@ More specifically, COOL is the perfect system for you if you have any requiremen
 6. **Deal with various data formats.** Want to load the data from various data formats.
 
 ### Learn more 
-- Try the COOL [Quickstart](docs/getting-started/quickstart.md)
-- Learn more from COOL tutorials
-- Read the academic research papers to learn COOL in details.
+- Try the COOL [Quickstart](/docs/getting-started/quickstart)
+- Learn more from COOL [tutorials](/docs/tutorials/tutorial-input-format)
+- Read the [academic research papers](/docs/publication/paper) to learn COOL in details.
