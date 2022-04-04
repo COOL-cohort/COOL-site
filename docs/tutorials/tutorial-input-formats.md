@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 This tutorials firstly shows a complete example of using a local COOL package to load the sample sogamo csv dataset and executes a query. Then describes briefly how the data in other format can be similarly loaded.
 ## Data sources
 Let's take a look at all the source files:
-* schema file: Each field is described by a triplet of name, time and preCAL (if pre calculation is used for building COOL's cube). The charset used to write data in bytes can also be changed in this yaml file. 
+* schema file: Each field is described by a triplet of name, time and preCAL (if pre calculation is used for building COOL's cube). The charset used to write data in bytes can also be changed in this yaml file. Please refer to the [schema instruction](docs/Concepts/schema.md) for more details about how to select the filedType.
   ```yaml
   ---
   charset: "UTF-8"
