@@ -4,17 +4,19 @@ title: Turorial-data-preparation
 tags: [data-paration, data-input]
 ---
 
-# TPC-H dataset
+# Prepare datasets
 
-This tutorials shows how to download and convert TPC-H dataset into COOL inputs.
+This tutorial shows how to prepare necessary materials as COOL inputs.
 
-## Download TPC-H dataset.
+Let's take the TPC-H dataset preparation process as an example to demonstrate how we prepare these files.
+
+### Step1. Download TPC-H dataset.
 
 Download from [data source](https://www.tpc.org/tpc_documents_current_versions/download_programs/tools-download-request5.asp?bm_type=TPC-H&bm_vers=3.0.0&mode=CURRENT-ONLY) and extract from data from the tic zip file.
 
-## Prepare `Table.yaml`
+### Step2. Prepare `Table.yaml`
 
-we need to firstly define `table.yaml ` to describe each filed. 
+we need to firstly define `table.yaml ` to describe each filed. Please refer to the [schema instruction](docs/Concepts/schema.md) for more details about how to select the filedType.
 
 ```yaml
 charset: "UTF-8"
@@ -81,7 +83,7 @@ fields:
   preCal: false
 ```
 
-## Extract TPC-H dataset and convert to `dim.csv`, `data.csv`
+### Step3. Extract TPC-H dataset and convert to `dim.csv`, `data.csv`
 
 1. In `/TPC-H_Tools_v3.0.0/dbgen`  run
 

@@ -46,13 +46,15 @@ const sidebars = {
             label: 'Querying',
             items: [
                 'querying/cohort-query',
+                'querying/olap-query',
+                'querying/funnel-query'
             ]
         },
         {
             type: "category",
             label: "Tutorials",
             items: [
-                'tutorials/tutorial-input-format'
+                'tutorials/tutorial-input-format',
             ]
         },
         'application/application',

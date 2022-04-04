@@ -114,9 +114,9 @@ At last, we need to complete the cohort query with other related information (e.
   "outputCohort":null
 ```
 
-These parameters are used for different perspectives:
+The definitions of these parameters are listed below:
 - `appKey`: select a certain application if there exists many applications
 - `datasetSource`: the name of the cube
 - `inputCohort`: the name of the cohort that is selected before and will be used in this cohort analysis
-- `measure`: the name of the measurement.
-- `outputCohort`: the name of the cohort that is seected by this cohort and will be saved into a this cohort
+- `measure`: the name of the measurement in this cohort analysis.
+- `outputCohort`: the name of the cohort that is selected by this cohort and will be saved into this cohort
