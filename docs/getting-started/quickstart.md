@@ -175,6 +175,9 @@ For example, with the [query](https://github.com/COOL-cohort/COOL/blob/main/heal
 Cohort analysis is one of the most essential functionalities in our COOL system. In COOL system, we are able to flexibly design the cohort query. For example, it is easy for us to design the initial cohort users, birth events, and diverse filters.
 
 Following the aforementioned cohort selection step, we can analyze results that concentrate on these selected users. Specifically, we analyze their Labtest-C events with values in the range from 45 to 100, and group these users by their year ages.
+
+### Submit query.json file
+
 We provide an [example cohort query](https://github.com/COOL-cohort/COOL/blob/main/health/query1-1.json) for the `health` dataset to demonstrate how we design the cohort analysis.
 
 ```json
@@ -255,7 +258,7 @@ We provide an [example cohort query](https://github.com/COOL-cohort/COOL/blob/ma
 
 We can also analyze the whole group of users in this `health` dataset, that is to change this `inputCohort` into a `null` value.
 
-## Achieve the results
+### Achieve the results
 
 You can now see the results in the console and leverage these results.
 
@@ -303,3 +306,114 @@ After these Then you can see the results like this:
 
 In the results, we can easily see the cohort with their age range and the number of users that satisfy our cohort query definition at different stages (i.e., ages). Drawing these results into a line chart or heatmap, it is obvious to analyze the relative speed for the Medicine-A to take effect in different cohorts.
 Besides, when we come to the event filters that are in the value type, COOL can also analyze the statistical values of the events at different stages.
+
+## Step5. Conduct OLAP analysis
+
+Conventional OLAP  is an essential functionalities in our COOL system. COOL supprots two operators for OLAP query.
+
+1. MetaChunk selector: find weter the chunk contains the data
+2. DataChunk selector: find matched data records in query processing.
+
+The whole **OLAP Processing Flow** can be divided in follow steps.
+
+1. `Planner` => generate execution plan
+2. Fetch a `cublet` from specified data source.
+3. `MetaChunk selector` => find `cublet` with candidate values
+4. Repeat form 2 unit find a `cublet`
+5. `DataChunk selector` => find records.
+6. `Aggregators` on the scanning result and group the results;
+7. Repeat from 2 until all cublets are processed. 
+8. `Compressor`: compress and store agggregate results
+
+Now For TPC-H dataset, find all countries in Europe area and its total amount of orders with priority equals to “2-HIGH” between January 1st, 1993 and January 1st, 1994.
+
+### Submit query.json file
+
+Firstly define a query.json as shown in [query.json](
+
+We provide an [example slap query](https://github.com/COOL-cohort/COOL/olap-tpch/query.json) for the `tpch` dataset to demonstrate how we design the OLAP analysis.
+
+```json
+{
+  "dataSource": "tpc-h-10g",
+  "selection": {
+    "type": "and",
+    "dimension": null,
+    "values": null,
+    "fields": [
+      { "type": "filter","dimension": "O_ORDERPRIORITY","values": [ "2-HIGH" ],"fields":[]},
+      { "type": "filter","dimension": "R_NAME","values": ["EUROPE"],"fields":[]}
+    ] },
+  "groupFields":["N_NAME","R_NAME"],
+  "aggregations":[
+    {"fieldName":"O_TOTALPRICE","operators":["COUNT","SUM"]}
+  ],
+  "timeRange":"1993-01-01|1994-01-01",
+  "granularity":"NULL"
+}
+```
+
+### Achieve the results
+
+You can now see the results in the console and leverage these results.
+
+After these Then you can see the results like this:
+
+```json
+{
+  "status" : "OK",
+  "elapsed" : 0,
+  "result" : [ {
+    "timeRange" : "1993-01-01|1994-01-01",
+    "key" : "RUSSIA|EUROPE",
+    "fieldName" : "O_TOTALPRICE",
+    "aggregatorResult" : {
+      "count" : 2.0,
+      "sum" : 312855,
+      "average" : null,
+      "max" : null,
+      "min" : null,
+      "countDistinct" : null
+    }
+  }, {
+    "timeRange" : "1993-01-01|1994-01-01",
+    "key" : "GERMANY|EUROPE",
+    "fieldName" : "O_TOTALPRICE",
+    "aggregatorResult" : {
+      "count" : 1.0,
+      "sum" : 4820,
+      "average" : null,
+      "max" : null,
+      "min" : null,
+      "countDistinct" : null
+    }
+  }, {
+    "timeRange" : "1993-01-01|1994-01-01",
+    "key" : "ROMANIA|EUROPE",
+    "fieldName" : "O_TOTALPRICE",
+    "aggregatorResult" : {
+      "count" : 2.0,
+      "sum" : 190137,
+      "average" : null,
+      "max" : null,
+      "min" : null,
+      "countDistinct" : null
+    }
+  }, {
+    "timeRange" : "1993-01-01|1994-01-01",
+    "key" : "UNITED KINGDOM|EUROPE",
+    "fieldName" : "O_TOTALPRICE",
+    "aggregatorResult" : {
+      "count" : 1.0,
+      "sum" : 33248,
+      "average" : null,
+      "max" : null,
+      "min" : null,
+      "countDistinct" : null
+    }
+  } ]
+}
+```
+
+
+
