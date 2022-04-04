@@ -89,7 +89,7 @@ Second, we need to define the target event that we want to investigate. For exam
 
 In this cohort query, the analysis target is defined by two events based on two columns that are `labtest` and `value`. The former one is in the Segment type, while the later one is in the Metric type. Hence, the type of first event filter should be "Set", while the type of the other one should be "Range". It totally depoends on the type of the column.
 
-# Step3. Define the time field
+## Step3. Define the time field
 Third, we need to define the time filed, that is to decide how long we want to observe and the time interval.
 
 ```json
@@ -103,7 +103,7 @@ Third, we need to define the time filed, that is to decide how long we want to o
 ```
 In this example, we want to observe for 7 days from their birthdate to 7 days later and the time interval is set to 1 day.
 
-# Step4. Define other related information
+## Step4. Define other related information
 At last, we need to complete the cohort query with other related information (e.g., cube name, input cohort, app key, etc)
 
 ```json
