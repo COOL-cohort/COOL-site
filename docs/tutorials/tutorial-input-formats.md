@@ -8,10 +8,10 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # How to Load Data to COOL
-This tutorials firstly shows a complete example of using a local COOL package to load the sample sogamo csv dataset and executes a query. Then describes briefly how the data in other format can be similarly loaded.
+This tutorial firstly shows a complete example of using a local COOL package to load the sample sogamo csv dataset and executes a query. Then describes briefly how the data in other formats can be similarly loaded.
 ## Data sources
 Let's take a look at all the source files:
-* schema file: Each field is described by a triplet of name, time and preCAL (if pre calculation is used for building COOL's cube). The charset used to write data in bytes can also be changed in this yaml file. Please refer to the [schema instruction](docs/Concepts/schema.md) for more details about how to select the filedType.
+* schema file: Each field is described by a triplet of name, time, and preCAL (if pre-calculation is used for building COOL's cube). The charset used to write data in bytes can also be changed in this YAML file. Please refer to the [schema instruction](docs/Concepts/schema.md) for more details about how to select the filedType.
   ```yaml
   ---
   charset: "UTF-8"
@@ -67,17 +67,17 @@ requests.post("http://127.0.0.1:8080/v1/load", data='{"dataFileType": "CSV", "cu
 $ java -cp ./cool-core/target/cool-core-0.1-SNAPSHOT.jar com.nus.cool.functionality.CsvLoader sogamo sogamo/table.yaml sogamo/dim_test.csv sogamo/test.csv datasetSource
 ```
 
-The command indicates that we use the CsvLoader to load the sogamo dataset. 
+The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 `sogamo`:(required)  the name of the cube, a unique dataset name under the cube directory
 
-`sogamo/table.yaml`:(required) tha path to the table.yaml that describes the table schema
+`sogamo/table.yaml`:(required) the path to the table.yaml that describes the table schema
 
-`sogamo/dim_test.csv`:(required) the path to the dimension file 
+`sogamo/dim_test.csv`:(required) the path to the dimension file
 
 `sogamo/test.csv`:(required) the path to the raw data that is in csv format
 
-`datasetSource`:(required) the name of the cube repository that stores the converted dataset 
+`datasetSource`:(required) the name of the cube repository that stores the converted dataset
 
 </TabItem>
 
@@ -122,7 +122,7 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 `sogamo`:(required)  the name of the cube, a unique dataset name under the cube directory
 
-`sogamo/table.yaml`:(required) tha path to the table.yaml that describes the table schema
+`sogamo/table.yaml`:(required) the path to the table.yaml that describes the table schema
 
 `sogamo/dim_test.csv`:(required) the path to the dimension file
 
@@ -167,7 +167,7 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 `sogamo`:(required)  the name of the cube, a unique dataset name under the cube directory
 
-`sogamo/table.yaml`:(required) tha path to the table.yaml that describes the table schema
+`sogamo/table.yaml`:(required) the path to the table.yaml that describes the table schema
 
 `sogamo/dim_test.csv`:(required) the path to the dimension file
 
@@ -211,7 +211,7 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 `sogamo`:(required)  the name of the cube, a unique dataset name under the cube directory
 
-`sogamo/table.yaml`:(required) tha path to the table.yaml that describes the table schema
+`sogamo/table.yaml`:(required) the path to the table.yaml that describes the table schema
 
 `sogamo/dim_test.csv`:(required) the path to the dimension file
 

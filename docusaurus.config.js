@@ -124,24 +124,15 @@ const config = {
             items: [
               {
                 label: 'What is COOL?',
-                href: 'https://www.comp.nus.edu.sg/~dbsystem/cool/#/',
+                href: '/docs/getting-started/introduction',
               },
               {
-                label: 'Who uses COOL?[TODO]',
-                to: '/',
+                label: 'How to use COOL webapp',
+                to: '/blog/2021/12/14/how-to-perform-cohort-analysis-with-COOL',
               },
               {
-                label: 'Use Case',
+                label: 'COOL for covid19',
                 href: 'https://www.comp.nus.edu.sg/~dbsystem/cool/#/covid-19',
-              },
-            ],
-          },
-          {
-            title: 'Integrations',
-            items: [
-              {
-                label: 'A[TODO]',
-                to: '/',
               },
             ],
           },
@@ -150,11 +141,19 @@ const config = {
             items: [
               {
                 label: 'Getting Start',
-                href: customFields.githubUrl+customFields.EngineName,
+                href: '/docs/getting-started/quickstart',
               },
               {
-                label: 'User Guide',
-                to: '/',
+                label: 'Concepts',
+                to: '/docs/Concepts/input-format',
+              },
+              {
+                label: 'Querying',
+                to: '/docs/querying/cohort-query',
+              },
+              {
+                label: 'Tutorials',
+                to: '/docs/tutorials/tutorial-input-format',
               },
             ],
           },

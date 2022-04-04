@@ -30,10 +30,10 @@ function IntroHeader() {
     return (
         <Section background="dark" className="IntroHeader">
             <div className="socialLinks">
-                <a href="https://twitter.com/" className="social-button twitter-follow-button">
-                    <div className="icon"/>
-                    Follow
-                </a>
+                {/*<a href="https://twitter.com/" className="social-button twitter-follow-button">*/}
+                {/*    <div className="icon"/>*/}
+                {/*    Follow*/}
+                {/*</a>*/}
                 <div className="social-button github-button">
                     <GitHubButton
                         href={customFields.githubUrl+customFields.EngineName}
