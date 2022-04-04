@@ -10,7 +10,7 @@ This tutorials shows how to download and convert TPC-H dataset into COOL inputs.
 
 ## Download TPC-H dataset.
 
-Download from [data source](https://www.tpc.org/tpc_documents_current_versions/download_programs/tools-download-request5.asp?bm_type=TPC-H&bm_vers=3.0.0&mode=CURRENT-ONLY) and extract from data from the tic zip file.
+Download from [data source](https://www.tpc.org/tpc_documents_current_versions/download_programs/tools-download-request5.asp?bm_type=TPC-H&bm_vers=3.0.0&mode=CURRENT-ONLY) and extract from data from the tic zip file according to [instructions](https://github.com/electrum/tpch-dbgen)
 
 ## Prepare `Table.yaml`
 
