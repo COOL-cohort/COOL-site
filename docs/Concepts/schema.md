@@ -18,7 +18,7 @@ Cohort are built on users. A cohort is a set of userkeys that have records satis
 Actions are users behavior from which we build cohort.
 
 ## ActionTime
-The time associated to each action in the table. ActionTime also describes the age dimension of a user in a cohort for aggregation. Read more about ActionTime [here](action-time.md)
+The time associated to each action in the table. ActionTime also describes the age dimension of a user in a cohort for aggregation. Read more about ActionTime [here](/docs/Concepts/action-time).
 
 ## Metric
 Fields that contain numeric values for selecting users or aggregation during cohort analysis

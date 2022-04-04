@@ -7,7 +7,6 @@ tags: [introduction]
 
 COOL is a cohort OLAP system specialized for cohort analysis with extremely low latency, thus suitable for large-scale user behavior analysis.
 The vision of COOL is to address the inefficiency of underlying database systems processing cohort analysis (cohort queries) that is an emerging and widely-used analysis pattern in various areas. 
-In COOL, cohort query processing is facilitated by specialized operators that involve only two fast scans on a sophisticated storage to achieve near real-time response.
 By utilizing COOL, we can quickly get clear and explainable user behavioral analytical results which can be used for further downstream tasks. 
 
 Based on the user behavior analysis, COOL can be widely applied in various areas:
@@ -64,6 +63,6 @@ More specifically, COOL is the perfect system for you if you have any requiremen
 6. **Deal with various data formats.** Want to load the data from various data formats.
 
 ### Learn more 
-- Try the COOL [Quickstart](docs/getting-started/quickstart.md)
-- Learn more from COOL tutorials
-- Read the academic research papers to learn COOL in details.
+- Try the COOL [Quickstart](/docs/getting-started/quickstart)
+- Learn more from COOL [tutorials](/docs/tutorials/tutorial-input-format)
+- Read the [academic research papers](/docs/publication/paper) to learn COOL in details.

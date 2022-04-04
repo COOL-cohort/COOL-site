@@ -16,7 +16,7 @@ Download from [data source](https://www.tpc.org/tpc_documents_current_versions/d
 
 ### Step2. Prepare `Table.yaml`
 
-we need to firstly define `table.yaml ` to describe each filed. Please refer to the [schema instruction](docs/Concepts/schema.md) for more details about how to select the filedType.
+we need to firstly define `table.yaml ` to describe each filed. Please refer to the [schema instruction](/docs/Concepts/schema) for more details about how to select the filedType.
 
 ```yaml
 charset: "UTF-8"

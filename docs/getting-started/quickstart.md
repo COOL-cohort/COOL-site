@@ -77,7 +77,7 @@ Here, we take the CSV data file as an example to demonstrate how to load a datas
 - **dimension file**: a csv file with "," delimiter. Each line of this file has two fields: the first field is the name of a column in the dataset, and the second field is a value of this column. Each distinct value of each column in the dataset shall appear in this dimension file once.
 - **dataset schema file**: a yaml file specifying the dataset's columns and their measure fields.
 
-More details about these files are contained in the [Data Ingestion Section](docs/Concepts/input-format.md). 
+More details about these files are contained in the [Data Ingestion Section](/docs/Concepts/input-format). 
 
 Once these files are prepared, we can package our LOAD query into a dictonary.
 
