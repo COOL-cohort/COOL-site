@@ -83,7 +83,9 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 <TabItem value="CURL">
 
-curl -X POST -H "Content_Type: text/plain" -d '{"dataFileType": "CSV", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.csv", "outputPath": "datasetSource}'  http://127.0.0.1:8080/v1/load
+```bash
+curl -X POST -H "Content-Type: text/plain" -d '{"dataFileType": "CSV", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.csv", "outputPath": "datasetSource"}'  http://127.0.0.1:8080/v1/load
+```
 
 </TabItem>
 </Tabs>
@@ -134,7 +136,9 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 <TabItem value="CURL">
 
-curl -X POST -H "Content_Type: text/plain" -d '{"dataFileType": "PARQUET", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.parquet", "outputPath": "datasetSource"}'  http://127.0.0.1:8080/v1/load
+```bash
+curl -X POST -H "Content-Type: text/plain" -d '{"dataFileType": "PARQUET", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.parquet", "outputPath": "datasetSource"}'  http://127.0.0.1:8080/v1/load
+```
 
 </TabItem>
 </Tabs>
@@ -179,7 +183,9 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 <TabItem value="CURL">
 
-curl -X POST -H "Content_Type: text/plain" -d '{"dataFileType": "ARROW", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.arrow", "outputPath": "datasetSource"}'  http://127.0.0.1:8080/v1/load
+```bash
+$ curl -X POST -H "Content-Type: text/plain" -d '{"dataFileType": "ARROW", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/test.arrow", "outputPath": "datasetSource"}'  http://127.0.0.1:8080/v1/load
+```
 
 </TabItem>
 </Tabs>
@@ -225,7 +231,9 @@ The command indicates that we use the CsvLoader to load the sogamo dataset.
 
 <TabItem value="CURL">
 
-curl -X POST -H "Content_Type: text/plain" -d '{"dataFileType": "AVRO", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/avro/test.avro", "outputPath": "datasetSource", "configPath": "sogamo/avro/schema.avsc"}'  http://127.0.0.1:8080/v1/load
+```bash
+curl -X POST -H "Content-Type: text/plain" -d '{"dataFileType": "AVRO", "cubeName": "sogamo", "schemaPath": "sogamo/table.yaml", "dimPath": "sogamo/dim.csv", "dataPath": "sogamo/avro/test.avro", "outputPath": "datasetSource", "configPath": "sogamo/avro/schema.avsc"}'  http://127.0.0.1:8080/v1/load
+```
 
 </TabItem>
 </Tabs>
