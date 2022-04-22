@@ -332,9 +332,9 @@ function UseCaseTabs() {
 
 function TechPre() {
     return (
-        <Section className="TechPre" background="tint">
-            <div className="TechText">
-                <h2 className="title">Extend Cohort Analysis on our COOL</h2>
+        <Section className="TechPre" background="tint" >
+            <div  id="techVideo" className="TechText">
+                <h2 className="title">Technical Design of our COOL system</h2>
                 {/*<p className="content">*/}
                 {/*    The video in the left demonstrates how COOL processes data, designs storage format, operate cohort queries for cohort analysis*/}
                 {/*    in details.*/}
