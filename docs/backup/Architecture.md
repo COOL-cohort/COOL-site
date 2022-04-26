@@ -25,3 +25,5 @@ Cool Single-node System Architecture.
 2. **Query Processing**
 
 ### Distributed architecture
+
+![image-20220426223525187](../assets/images/image-20220426223525187.png)

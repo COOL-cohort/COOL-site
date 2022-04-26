@@ -14,13 +14,9 @@ This part will get you started with COOL and be familiar with its features. Foll
 
 ## Requirement
 
-:::info Prerequisites
-
 COOL support java 8+ environment.
 
 We can also build the COOL system from the source code in this environment.
-
-:::
 
 First, we need to download the latest COOL distribution to follow this tutorial. We can either download the published distribution or build the distribution from the source code on Github.
 
