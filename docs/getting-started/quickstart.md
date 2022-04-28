@@ -14,7 +14,9 @@ This part will get you started with COOL and be familiar with its features. Foll
 
 ## Requirement
 
-COOL support java 8+ environment.
+:::info Prerequisites
+COOL supports java 8 and java 11 environment.
+:::
 
 We can also build the COOL system from the source code in this environment.
 

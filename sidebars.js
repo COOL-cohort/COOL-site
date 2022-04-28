@@ -26,6 +26,8 @@ const sidebars = {
             items: [
                 'getting-started/introduction',
                 'getting-started/quickstart',
+                'getting-started/single-node-deployment',
+                'getting-started/distributed-deployment',
             ]
         },
         {
