@@ -11,7 +11,7 @@ tags: [welcome]
 The single-node architecture of Cool have six components in the system as illustrated in the following Figure, consisting of loader, controller, parser, planner, compressor and executor. The key components are detailed as follows:
 
 Cool Single-node System Architecture.
-![architecture](../assets/images/Single_node_architecture.PNG)
+![single_node_architecture](../assets/images/single_node_arch.png)
 
 1. **Data Model**
 
@@ -25,3 +25,5 @@ Cool Single-node System Architecture.
 2. **Query Processing**
 
 ### Distributed architecture
+
+![distributed_architecture](../assets/images/distributed_arch.png)
