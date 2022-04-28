@@ -1,10 +1,20 @@
+---
+id: single-node-deployment
+title: Single Node Deployment
+tags: [deployment]
+---
+
 # Cluster Setting
 
-## Standalone Operation
+## Single node Architecture
 
-By default, we can run COOL at a non-distributed mode, as a single Java process. This is useful for debugging. 
+![single_node_architecture](../assets/images/single_node_arch.png)
 
-### Run Standalone Server
+## Single Node Operation
+
+By default, we can run COOL at a single node mode, as a single Java process. This is useful for debugging.
+
+### Run a single node server
 
 We can start the COOL's query server with the following command
 
@@ -12,7 +22,7 @@ We can start the COOL's query server with the following command
 java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar <datasetSource> <PORT> STANDALONE
 ```
 
-eg.
+For example,
 
 ```
 java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar /COOL/datasetSource/ 9009 STANDALONE
@@ -22,7 +32,7 @@ where the argument is as follows:
 
 1. `datasetSource`: the path to the repository of compacted datasets.
 2. `9009`: the port of the server.
-3. `STANDALONE`: run as STANDALONE model
+3. `STANDALONE`: run as a single-node model
 
 ### API
 
@@ -30,7 +40,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]: info
 
-  - List all workable URLs
+    - List all workable URLs
 
   ```bash
   curl --location --request GET 'http://localhost:9009/info'
@@ -38,7 +48,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]: load
 
-  - Reload the cube to the native format 
+    - Reload the cube to the native format
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/load' \
@@ -48,7 +58,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]: listcubes
 
-  - List existing cubes
+    - List existing cubes
 
   ```bash
   curl --location --request GET 'http://127.0.0.1:9009/listcubes'
@@ -56,7 +66,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]: cohort/list
 
-  - List all cohorts from the selected cube
+    - List all cohorts from the selected cube
 
   ```bash
   curl --location --request GET 'http://127.0.0.1:9009/cohort/list?cube=health'
@@ -64,7 +74,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]: cohort/selection
 
-  - Cohort Selection
+    - Cohort Selection
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/selection' \
@@ -74,11 +84,11 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]:v1/cohort/exploration
 
-  - Cohort Exploration
+    - Cohort Exploration
 
 - \[server:port]: /cohort/cohort-analysis
 
-  - Perform cohort analysis
+    - Perform cohort analysis
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/cohort-analysis' \
@@ -88,7 +98,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]:v1/funnel/analysis
 
-  - Perform funnel analysis
+    - Perform funnel analysis
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/funnel-analysis' \
@@ -98,11 +108,10 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
 - \[server:port]: /olap/iceberg
 
-  - Perform iceberg query
+    - Perform iceberg query
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/olap/iceberg' \
   --header 'Content-Type: application/json' \
   --form 'queryFile=@"/COOL/olap-tpch/query.json"'
   ```
-
