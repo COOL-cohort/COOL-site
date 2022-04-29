@@ -15,7 +15,7 @@ java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar <datasetSo
 eg.
 
 ```
-java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar /COOL/datasetSource/ 9009 STANDALONE
+java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar datasetSource/ 9009 STANDALONE
 ```
 
 where the argument is as follows:
