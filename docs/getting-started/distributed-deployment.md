@@ -30,6 +30,12 @@ Follow the Pseudo-distributed Operation [instruction](https://hadoop.apache.org/
 
 Follow zookeeper started [guide](https://zookeeper.apache.org/doc/r3.3.3/zookeeperStarted.html)
 
+#### Update Cfg
+
+Update configuration at conf/app.properties
+
+Update hdfs.host, zookeeper.host, and server host
+
 #### RUN broker and worker in COOL
 
 1. Run many workers, each worker has a unique port
