@@ -35,17 +35,17 @@ Follow zookeeper started [guide](https://zookeeper.apache.org/doc/r3.3.3/zookeep
 1. Run many workers, each worker has a unique port
 
    ```bash
-   java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar /COOL/datasetSource/ 9011 WORKER
+   java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar datasetSource/ 9011 WORKER
    ```
 
    ```
-   java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar /COOL/datasetSource/ 9012 WORKER
+   java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar datasetSource/ 9012 WORKER
    ```
 
 2. Run broker
 
    ```bash
-   java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar /COOL/datasetSource/ 9013 BROKER
+   java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar datasetSource/ 9013 BROKER
    ```
 
 ### Datasets
@@ -65,7 +65,7 @@ In distributed mode, the client can only talk to the broker.
     - List all workable urls
 
   ```bash
-  curl --location --request GET 'http://localhost:9009/info'
+  curl --location --request GET 'http://localhost:9013/info'
   ```
 
 - \[server:port]: /cohort/cohort-analysis
