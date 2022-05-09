@@ -15,7 +15,7 @@ java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar <datasetSo
 eg.
 
 ```
-java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar /COOL/datasetSource/ 9009 STANDALONE
+java -jar cool-queryserver/target/cool-queryserver-0.0.1-SNAPSHOT.jar datasetSource/ 9009 STANDALONE
 ```
 
 where the argument is as follows:
@@ -68,11 +68,11 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/selection' \
-  --header 'Content-Type: application/json' \
-  --form 'queryFile=@"COOL/health/query1-0.json"'
+  --header 'Content-Type: multipart/form-data' \
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/health/query1-0.json"'
   ```
 
-- \[server:port]:v1/cohort/exploration
+- \[server:port]: /cohort/exploration
 
   - Cohort Exploration
 
@@ -82,18 +82,18 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/cohort-analysis' \
-  --header 'Content-Type: application/json' \
-  --form 'queryFile=@"/COOL/health/query2.json"'
+  --header 'Content-Type: multipart/form-data' \
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/health/query2.json"'
   ```
 
-- \[server:port]:v1/funnel/analysis
+- \[server:port]: /funnel/analysis
 
   - Perform funnel analysis
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/funnel-analysis' \
-  --header 'Content-Type: application/json' \
-  --form 'queryFile=@"/COOL/sogamo/query1.json"'
+  --header 'Content-Type: multipart/form-data' \
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/sogamo/query1.json"'
   ```
 
 - \[server:port]: /olap/iceberg
@@ -102,7 +102,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
 
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/olap/iceberg' \
-  --header 'Content-Type: application/json' \
-  --form 'queryFile=@"/COOL/olap-tpch/query.json"'
+  --header 'Content-Type: multipart/form-data' \
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/olap-tpch/query.json"'
   ```
 
