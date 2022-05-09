@@ -69,7 +69,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/selection' \
   --header 'Content-Type: multipart/form-data' \
-  --form 'queryFile=@"/Users/kevin/project_java/COOL/health/query1-0.json"'
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/health/query1-0.json"'
   ```
 
 - \[server:port]: /cohort/exploration
@@ -83,7 +83,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/cohort-analysis' \
   --header 'Content-Type: multipart/form-data' \
-  --form 'queryFile=@"/Users/kevin/project_java/COOL/health/query2.json"'
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/health/query2.json"'
   ```
 
 - \[server:port]: /funnel/analysis
@@ -93,7 +93,7 @@ In this server, we implement many APIs and list their corresponding URLs as foll
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/cohort/funnel-analysis' \
   --header 'Content-Type: multipart/form-data' \
-  --form 'queryFile=@"/Users/kevin/project_java/COOL/sogamo/query1.json"'
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/sogamo/query1.json"'
   ```
 
 - \[server:port]: /olap/iceberg
@@ -103,6 +103,6 @@ In this server, we implement many APIs and list their corresponding URLs as foll
   ```bash
   curl --location --request POST 'http://127.0.0.1:9009/olap/iceberg' \
   --header 'Content-Type: multipart/form-data' \
-  --form 'queryFile=@"/Users/kevin/project_java/COOL/olap-tpch/query.json"'
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/olap-tpch/query.json"'
   ```
 
