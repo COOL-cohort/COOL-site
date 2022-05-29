@@ -56,7 +56,7 @@ Update hdfs.host, zookeeper.host, and server host
 
 ### Datasets
 
-Manually upload used Cublet, query.json file to HDFS
+Manually upload used Cublet, query.json file to HDFS, or use the following APIs to upload data, table.yaml, and query to HDFS.
 
 - Upload all partitioned .dz files to HDFS path: `/cube/` eg. `"/cube/health/v1/1805b2fdb75v2.dz"`, `"/cube/health/v1/1804bc18968.dz"`
 - Upload query.json file to `/tmp/queryID` folder, eg. `"/tmp/1/query.json"`
@@ -65,6 +65,28 @@ Manually upload used Cublet, query.json file to HDFS
 ### API
 
 In distributed mode, the client can only talk to the broker.
+
+- \[server:port]: broker/load-data-to-hdfs
+
+  Upload data and table into HDFS for future usage. 
+
+  This API requires the CSV and table.YAML files are already on the server-side. 
+
+  ```shell
+  curl --location --request POST 'http://127.0.0.1:9013/broker/load-data-to-hdfs' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{"dataFileType": "CSV", "cubeName": "health", "schemaPath": "health/table.yaml", "dimPath": "health/dim.csv", "dataPath": "health/raw2.csv", "outputPath": "datasetSource"}'
+  ```
+
+- \[server:port]: broker/load-query-to-hdfs
+
+  Upload the query file into HDFS for the future query.
+
+  ```shell
+  curl --location --request POST 'http://127.0.0.1:9013/broker/load-query-to-hdfs' \
+  --header 'Content-Type: multipart/form-data' \
+  --form 'queryFile=@"FULL_PATH_PREFIX/COOL/health/query.json"'
+  ```
 
 - \[server:port]: info
 
