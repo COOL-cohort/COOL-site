@@ -21,7 +21,7 @@ First, we need to initialize cohorts (i.e., define their birth events and cohort
             "cohortFields":[{
                 "field": "birthyear",
                 "logScale": false,
-                "minLevel": 195,
+                "minLevel": 1950,
                 "numLevel": 5,
                 "scale": 10.0
             }],
