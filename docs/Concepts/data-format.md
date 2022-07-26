@@ -32,6 +32,8 @@ COOL supports multiple popular [input data formats](input-format.md), from which
 ## Cublet
 A Cublet is a file with one [MetaChunks](#MetaChunk) and one or more [DataChunks](#DataChunk) to store a group of records. It uses a list of offsets to quickly locate each chunk. 
 
+In most cases, users have some features that are invariant, such as birth year and gender. To make the storage more efficient, COOL removes the redundant data and stores the invariant data in the metachunk.
+
 Bytes written to a file:
 ```
 |-datachunks-|-metachunk-|-header-|-header offset-|
@@ -53,7 +55,7 @@ The header includes:
 |-chunkType-|-#field-|-field offsets-|
 ```
 ### HashMetaField
-A HashMetaField describes a field of type [AppKey](schema.md#appkey), [UserKey](schema.md#userkey), [Action](schema.md#action) and [Segment](schema.md#segment). It stores a field metadata as follows:
+A HashMetaField describes a field of type [AppKey](schema.md#appkey), [Action](schema.md#action) and [Segment](schema.md#segment). It stores a field metadata as follows:
 * `finger`: the sorted list of hash values compressed. It is used to locate the value and its global id.
 * `global ids`: the global id assigned to each of the value in the order of their position in finger. 
 * `#values`: number of values
@@ -69,10 +71,29 @@ compressed values bytes (in uncompressed form):
 ```
 |-#values-|-value offsets-|-values-|
 ```
+
+### UserMetaField
+UserField is based on HashField. But the field type is [UserKey](schema.md#userkey). Invariant data will be stored only once, so invariant data is stored in the metachunk with UserKey. UserMetaField has some new variants compared with HashMetaField.
+
+* `sortedFinger`: the sorted list of hash values compressed. `finger` is sorted by the key, but `sortedFinger` is sorted by global ids. It is used to locate the user to get the invariant data.
+
+* `sortedGlobal ids`: sorted vector of `global ids`. When processing the invariant data, we only know the global id of the user, `sortedGlobal ids` is used to help with the location of the user in the vector of invariant data.
+
+* `userToInvariant`: the vector to store the mapping between the user and invariant data. It should be noted that `String` data is stored as a hash key.
+
+Bytes written to file:
+```
+|-finger compressor codec-|-compressed finger-|-sorted finger compressor codec-|-global ids compressor codec-|-compressed global ids-|-sorted compressed global ids-|-values compressor codec-|-compressed values-| 
+```
+compressed values bytes (in uncompressed form):
+```
+|-#values-|-value offsets-|-values-|
+```
+
 ### RangeMetaField
 A RangeMetaField describes a field of type [ActionTime](schema.md#actiontime) and [Metric](schema.md#Metric). These raw values of these fields are numbers. Currently, their min and max are stored here.
 ## DataChunk
-A data chunk store a group of record in column oriented manner. There are two types of format, HashField and RangeField for different field types with tailored indexing and compression.
+A data chunk store a group of record in column oriented manner. There are two types of format, HashField and RangeField for different field types with tailored indexing and compression. It should be noted that invariant data fields are stored in metachunk with `UserKey` rather than in datachunks.
 
 ### HashField
 A HashField describes the values in each record of a field that belongs to a type described by HashMetaField.
