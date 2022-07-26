@@ -11,36 +11,35 @@ import TabItem from '@theme/TabItem';
 This tutorial firstly shows a complete example of using a local COOL package to load the sample sogamo csv dataset and executes a query. Then describes briefly how the data in other formats can be similarly loaded.
 ## Data sources
 Let's take a look at all the source files:
-* schema file: Each field is described by a triplet of name, time, and preCAL (if pre-calculation is used for building COOL's cube). The charset used to write data in bytes can also be changed in this YAML file. Please refer to the [schema instruction](/docs/Concepts/schema) for more details about how to select the filedType.
+* schema file: Each field is described by a quadruplet of name, field type, invariant field (whether the field is invariant to user) and preCAL (if pre-calculation is used for building COOL's cube). The charset used to write data in bytes can also be changed in this YAML file. Please refer to the [schema instruction](/docs/Concepts/schema) for more details about how to select the filedType.
   ```yaml
   ---
   charset: "UTF-8"
   fields:
   - name: "sessionId"
     fieldType: "AppKey"
+    invariantField: false
     preCal: false
   - name: "playerId"
     fieldType: "UserKey"
+    invariantField: false
     preCal: false
   - name: "role"
     fieldType: "Segment"
+    invariantField: true
     preCal: false
   - name: "money"
     fieldType: "Metric"
+    invariantField: false
     preCal: false
   - name: "event"
     fieldType: "Action"
+    invariantField: false
     preCal: false
   - name: "eventDay"
     fieldType: "ActionTime"
+    invariantField: false
     preCal: false
-  ```
-* dimension file: It includes comma separated pairs of `field-name,value`, to describe all unique values a field can take. For `Metric` and `ActionTime` field, only the `min|max` is needed.
-  ```
-  playerId,e9a3374d0d418cdf
-  eventDay,2013-05-20|2013-06-26
-  country,Australia
-  country,United States
   ```
 * data file, each records follow the field order specified in the schema file 
   ```
