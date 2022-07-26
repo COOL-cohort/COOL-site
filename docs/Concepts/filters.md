@@ -4,7 +4,7 @@ title: Filters
 tags: [filter]
 ---
 # Filters
-Filters process the values stored in the field to filter out records matching the criteria stated in the query. Filters also check the metadata of each field in DataChunk and MetaChunk to skip the loading of chunks or Cublet files entirely if it is certain no matching records are can be found inside. There are different filters in COOL that takes different criteria and works on distinct field types.
+Filters process the values stored in the field to filter out records matching the criteria stated in the query. Filters also check the metadata of each field in DataChunk and MetaChunk to skip the loading of chunks or Cublet files entirely if it is certain no matching records are can be found inside. It should be noted that filter will check the UserMetaField when checking the invariant data. There are different filters in COOL that takes different criteria and works on distinct field types.
 ## SetFieldFilter
 SetFieldFilter applies to [AppKey, UserKey, Segment and Action](schema.md#AppKey) fields. The criteria are expressed as a selected set of field values. If it is empty or contains the special string `ALL`, the filter accepts any sets of values.
 

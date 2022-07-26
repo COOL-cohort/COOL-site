@@ -14,7 +14,6 @@ In COOL 0.1.0, it only accepts datasets where each user data is grouped together
 ## CSV
 COOL requires two additional files besides the CSV file that contains raw data.
 * table.yaml: a YAML file that specifies the schema
-* dimension.csv: a csv file that specifies the value range of each dimension (optional)
 
 Loading support for csv files is in COOL's core (no extensions modules needed).
 ## Parquet
@@ -34,5 +33,5 @@ A tutorial to work on the different formats of the sogamo sample data is [here](
 Developers are welcome to add additional support for other data formats. The interface to implement is the [DataLoaderConfig](https://github.com/COOL-cohort/COOL/blob/main/cool-core/src/main/java/com/nus/cool/core/util/config/DataLoaderConfig.java). A DataLoaderConfig takes the input data to create a TupleReader that iterate over records, and a TupleParser that processes each record to a list of string that follows the order according to the schema specified in the table.yaml file. Once the DataLoaderConfig for the new format is implemented, loading can be done in two lines:
 ```java
 CoolLoader coolLoader = new CoolLoader(dataLoaderConfig);
-coolLoader.load(cube, schemaFileName, dimensionFileName, dataFileName, cubeRepo);
+coolLoader.load(cube, schemaFileName, dataFileName, cubeRepo);
 ```

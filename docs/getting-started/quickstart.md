@@ -72,7 +72,6 @@ In this step, we need to load a new dataset into our COOL system as a new cube. 
 Here, we take the CSV data file as an example to demonstrate how to load a dataset. Overall, we need to prepare several necessary files, that are
 
 - **dataset file**: a csv file with "," delimiter (normally dumped from a database table), and the table header is removed.
-- **dimension file**: a csv file with "," delimiter. Each line of this file has two fields: the first field is the name of a column in the dataset, and the second field is a value of this column. Each distinct value of each column in the dataset shall appear in this dimension file once.
 - **dataset schema file**: a yaml file specifying the dataset's columns and their measure fields.
 
 More details about these files are contained in the [Data Ingestion Section](/docs/Concepts/input-format). 
@@ -95,7 +94,6 @@ In this LOAD query, six parameters are needed that are
 - cubeName: (option) the port of the server. Default port is the 8080;
 - schemaPath: (required) the path to the schema file;
 - dataFileType: (required) the path to the source data file;
-- dimPath: (required) the path to the dimension file;
 - outputPath: (required) the name of the output fold, i.e., the name of the cube repository;
 - configPath: (option) the path to the config file. It is only needed when processing the AVRO data now.
 
