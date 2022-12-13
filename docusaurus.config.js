@@ -88,6 +88,11 @@ const config = {
             position: 'left',
           },
           {
+            to: 'pathname:///API-website',
+            label: 'API',
+            position: 'right',
+          },
+          {
             type: 'doc',
             docId: 'getting-started/introduction',
             position: 'right',
